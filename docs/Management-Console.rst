@@ -21,7 +21,11 @@ Viewers
 ^^^^^^^
 In this column of the Live Stream Table, number of subscribers of the stream are presented. This presentation is made  separately for each protocol ie. WebRTC, HLS and RTMP as shown in the image below. 
 
-.. |Antmedia Stream Viewers| image:: img/antmedia-stream-viewers.png
+
+.. figure:: img/antmedia-stream-viewers.png
+   :alt: Antmedia Stream Viewers
+   
+   Antmedia Stream Viewers
 
 .. warning::
    * In cluster mode if a viewer tries to play the stream from an edge server, edge server connects to the origin server. Then HLS viewer count is also incremented because of the edge server connections.
@@ -35,7 +39,10 @@ WebRTC Client Statistics Window opens when you click the eye icon near
 the WebRTC Viewer count. Here is an example window for a stream with 10
 connected clients.
 
-.. |Antmedia WebRTC Client Statistics| image:: img/antmedia-webrtc-statistics.png
+.. figure:: img/antmedia-webrtc-statistics.png
+   :alt: Antmedia WebRTC Client Statistics
+   
+   Antmedia WebRTC Client Statistics
 
 There are two graphics in WebRTC
 Client Statistics Window. **Bitrate vs Clients:** This graphic shows the
