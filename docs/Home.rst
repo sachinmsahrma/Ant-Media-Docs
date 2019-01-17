@@ -1,0 +1,69 @@
+|Build Status|
+
+Ant Media Server
+================
+
+Ant Media Server is an open source media server that supports:
+
+-  Ultra Low Latency Adaptive One to Many WebRTC Live Streaming in
+   **Enterprise Edition**
+-  Adaptive Bitrate for Live Streams (WebRTC, MP4, HLS) in **Enterprise
+   Edition**
+-  SFU in One to Many WebRTC Streams in **Enterprise Edition**
+-  Live Stream Publishing with RTMP and WebRTC
+-  WebRTC to RTMP Adapter
+-  IP Camera Support
+-  Recording Live Streams (MP4 and HLS)
+-  Restream to Social Media Simultaneously(Facebook and Youtube in in
+   **Enterprise Edition**)
+-  One-Time Token Control in **Enterprise Edition**
+-  Object Detection in **Enterprise Edition**
+
+### Community Please join and ask your questions in this mail group:
+https://groups.google.com/forum/#!forum/ant-media-server
+
+You can also ask your questions at Stack Overflow with the
+ant-media-server tag.
+
+### Links
+
+-  `Ant Media Web Site <https://antmedia.io>`__
+-  `Community Edition vs. Enterprise
+   Edition <https://antmedia.io/#comparison_table>`__
+
+Releases
+--------
+
+#### `Ant Media Server Community 1.6.0 (Dec 17,
+2018) <https://github.com/ant-media/Ant-Media-Server/releases/download/release-1.6.0/ant-media-server-community-1.6.0-181216_1551.zip>`__
+\* Update native codes to WebRTC v69 \* Optimize native byte usage in
+Java side \* SFU Support (EE) in WebRTC (Forwarding stream without
+transcoding with low latency) \* MP4/HLS Recording in SFU \* RTMP
+Pushing in SFU \* Show WebRTC Viewers Stats on Dashboard \* Rest API
+Documentation \* Improved Webhook support \* Enable/Disable MP4
+Recording on Stream basis via Rest API \* AVC compatibility \* Bug fixes
+
+#### `Ant Media Server Community 1.5.2 (Nov 16,
+2018) <https://github.com/ant-media/Ant-Media-Server/releases/download/ams-v1.5.2/ant-media-server-community-1.5.2-181116_1126.zip>`__
+\* Session replication and improvements in clustering \* Improvements in
+Management Console \* Publishing WebRTC streams to Social and other RTMP
+endpoints \* Bug fixes
+
+#### `Ant Media Server Community 1.5.1.1 (October 11,
+2018) <https://github.com/ant-media/Ant-Media-Server/releases/download/ams-v1.5.1.1/ant-media-server-community-1.5.1.1-181011_1410.zip>`__
+\* DB Based Clustering \* Autoscaling with DB Based Clustering \*
+Fetching audio streams from Shoutcast \* Bug fixes
+
+Previous releases
+https://github.com/ant-media/Ant-Media-Server/releases/
+
+Contact
+-------
+
+For more information and blog posts visit
+`antmedia.io <https://antmedia.io>`__
+
+contact@antmedia.io
+
+.. |Build Status| image:: https://travis-ci.org/ant-media/Ant-Media-Server.svg?branch=master
+   :target: https://travis-ci.org/ant-media/Ant-Media-Server
