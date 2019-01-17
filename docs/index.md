@@ -52,8 +52,6 @@ Conference
 RTMP
 ----
 
-.. _publish-and-playing-1:
-
 Publish and playing
 ~~~~~~~~~~~~~~~~~~~
 
