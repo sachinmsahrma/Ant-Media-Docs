@@ -1,95 +1,22 @@
-Getting Started
-===============
+Ant Media Server ...
 
-Features
---------
-
-Installation
-------------
-
-Basic Configurations
---------------------
-
-Management Console
-==================
-
-Dashboard
----------
-
-Application Pages
------------------
-
-Cluster Page
-------------
-
-Applications
-============
-
-WebRTCApp
----------
-
-LiveApp
--------
-
-WebRTCAppEE
------------
-
-Streaming Protocols
-===================
-
-WebRTC
-------
-
-Publish and playing
-~~~~~~~~~~~~~~~~~~~
-
-Peer-to-peer
-~~~~~~~~~~~~
-
-Conference
-~~~~~~~~~~
-
-RTMP
-----
-
-Publish and playing
-~~~~~~~~~~~~~~~~~~~
-
-HLS
----
-
-Playing
-~~~~~~~
-
-Adaptive Bitrate Streaming
-==========================
-
-Connecting Stream Sources
-=========================
-
-Streaming to Social Media
-=========================
-
-Recording
-=========
-
-Video On Demand
-===============
-
-Scaling and Load Balancing
-==========================
-
-Security
+Contents
 ========
 
-One Time Token
---------------
+:ref:`Keyword Index <genindex>`, :ref:`Search Page <search>`
 
-Cloud Deployments
-=================
+.. toctree::
+   :maxdepth: 2
 
-AWS
----
-
-Google Cloud
-------------
+Getting Started.rst
+Management Console.rst
+Applications.rst
+Streaming Protocols.rst
+Adaptive Bitrate Streaming.rst
+Connecting Stream Sources.rst
+Streaming to Social Media.rst
+Recording.rst
+Video On Demand.rst
+Scaling and Load Balancing.rst
+Security.rst
+Cloud Deployments.rst
