@@ -23,9 +23,9 @@ In this column of the Live Stream Table, number of subscribers of the stream are
 
 |Antmedia Stream Viewers|
 
-.. warning::
-    In cluster mode if a viewer tries to play the stream from an edge server, edge server connects to the origin server. Then HLS viewer count is also incremented because of the edge server connections.
-    The same situation goes for RTMP but not for WebRTC.
+.. warning:: Cluster Mode
+    - In cluster mode if a viewer tries to play the stream from an edge server, edge server connects to the origin server. Then HLS viewer count is also incremented because of the edge server connections.
+    - The same situation goes for RTMP but not for WebRTC.
 
 WebRTC Client Statistics
 """"""""""""""""""""""""
