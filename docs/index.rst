@@ -5,8 +5,8 @@ Contents
 .. toctree::
   :maxdepth: 2
 
-  Getting Started.rst
-  Management Console.rst
+  Getting-Started.rst
+  Management-Console.rst
   Applications.rst
   Streaming Protocols.rst
   Adaptive Bitrate Streaming.rst
