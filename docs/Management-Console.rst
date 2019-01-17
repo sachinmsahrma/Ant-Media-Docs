@@ -21,7 +21,7 @@ Viewers
 ^^^^^^^
 In this column of the Live Stream Table, number of subscribers of the stream are presented. This presentation is made  separately for each protocol ie. WebRTC, HLS and RTMP as shown in the image below. 
 
-|Antmedia Stream Viewers|
+.. |Antmedia Stream Viewers| image:: img/antmedia-stream-viewers.png
 
 .. warning::
    * In cluster mode if a viewer tries to play the stream from an edge server, edge server connects to the origin server. Then HLS viewer count is also incremented because of the edge server connections.
@@ -35,7 +35,9 @@ WebRTC Client Statistics Window opens when you click the eye icon near
 the WebRTC Viewer count. Here is an example window for a stream with 10
 connected clients.
 
-|Antmedia WebRTC Client Statistics| There are two graphics in WebRTC
+.. |Antmedia WebRTC Client Statistics| image:: img/antmedia-webrtc-statistics.png
+
+There are two graphics in WebRTC
 Client Statistics Window. **Bitrate vs Clients:** This graphic shows the
 measured bitrate and sending bitrate of a stream for each client.
 
@@ -60,7 +62,7 @@ In cluster mode, each node registers itself to MongoDB as a cluster
 node. All registered nodes are listed in the cluster table even if it is
 off at the moment.
 
-.. figure:: images/antmedia-cluster.png
+.. figure:: img/antmedia-cluster.png
    :alt: Antmedia Cluster Page
 
    Antmedia Cluster Page
@@ -83,7 +85,3 @@ Columns:
   as Accessible or Inaccessible.
 | **Actions:** It contains a Delete button to remove the node from
   MongoDB. It is meaningful for the Inaccessible nodes.
-
-.. |Antmedia Stream Viewers| image:: images/antmedia-stream-viewers.png
-.. |Antmedia WebRTC Client Statistics| image:: images/antmedia-webrtc-statistics.png
-
