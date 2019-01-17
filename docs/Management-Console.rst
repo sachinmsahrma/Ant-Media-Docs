@@ -1,20 +1,35 @@
+==================
+Management Console
+==================
+
 Dashboard
 =========
 
-Todo # Application Pages ## Live Streams ### Live Streams Table ####
-Stream Name #### Status #### Viewers In this column of the Live Stream
-Table number of subscribers of the stream are presented. This
-presentation is made separately for each protocol ie. WebRTC, HLS and
-RTMP as shown in the image below. |Antmedia Stream Viewers|
+Todo 
 
-**Remarks For Cluster Mode:** \* *In cluster mode if a viewer tries to
-play the stream from an edge server, edge server connects to the origin
-server. Then HLS viewer count is also incremented because of the edge
-server connections.* \* *The same situation goes for RTMP but not for
-WebRTC.*
+Application Pages
+=================
+Live Streams 
+------------
+
+Live Streams Table 
+~~~~~~~~~~~~~~~~~~
+Stream Name 
+^^^^^^^^^^^
+Status 
+^^^^^^
+Viewers
+^^^^^^^
+In this column of the Live Stream Table, number of subscribers of the stream are presented. This presentation is made  separately for each protocol ie. WebRTC, HLS and RTMP as shown in the image below. 
+
+|Antmedia Stream Viewers|
+
+**Remarks For Cluster Mode:** 
+* In cluster mode if a viewer tries to play the stream from an edge server, edge server connects to the origin server. Then HLS viewer count is also incremented because of the edge server connections.
+* The same situation goes for RTMP but not for WebRTC.
 
 WebRTC Client Statistics
-''''''''''''''''''''''''
+""""""""""""""""""""""""
 
 WebRTC Client Statistics Window opens when you click the eye icon near
 the WebRTC Viewer count. Here is an example window for a stream with 10
