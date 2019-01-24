@@ -1,11 +1,16 @@
+##############################
+Publish With Desktop Softwares
+##############################
+
 OBS(Open Broadcaster Softeware) is Free and open source software for
 video recording and live streaming. You can use either your PC’s
 embedded camera or externally connected one as a video source with OBS.
 Sound sources also can be configured with it. Ant Media Server is fully
 compatible with OBS software.
 
-Let’s have a look at step by step how to use OBS for streaming: ### Step
-1 : Getting the OBS:
+Let’s have a look at step by step how to use OBS for streaming: 
+Step 1 : Getting the OBS:
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Download via its official `web page <https://obsproject.com/>`__. It has
 Windows, Mac, and Linux releases.
