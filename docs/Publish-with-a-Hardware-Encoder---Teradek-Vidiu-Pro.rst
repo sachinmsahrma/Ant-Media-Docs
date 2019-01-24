@@ -3,7 +3,7 @@ have a look at step by step how to use Teradek Vidiu Pro for streaming,
 firstly start by powering the Teradek Vidiu Pro
 
 Step 1 : Connect to Teradek Vidiu Pro WiFi Network.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It creates a WiFi network with name VidiU−XXXXX. Connect that network
 with your computer and go to the 172.16.1.1 on your browser.
@@ -22,7 +22,7 @@ in the screen.
    Configure Network Settings of Teradek Vidiu
 
 Step 2 :Configure Wireless Network Connection of Teradek Vidiu Pro
-------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Click the WiFi item. Choose “Client” mode and Click “Browse” button to
 lookup the WiFi networks around.
@@ -53,7 +53,7 @@ the Network Settings > WiFi > Info to see the IP address of the device
 Sometimes you may need to power off / on the Teradek Vidiu Pro.
 
 Step 3 :Configure Broadcasting Settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Click the “Broadcast” item on the Settings screen
 
@@ -82,7 +82,7 @@ Click “Apply” button on the top right again
 Your device configuration is OK now.
 
 Step 4 : Start Broadcasting
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Connect the HDMI cable between HDMI source (camera, television or
 computer) and Teradek Vidiu Pro HDMI.
@@ -97,4 +97,4 @@ streaming, recording and publishing to any other 3rd party RTMP server
 as usual.
 
 When you are done about broadcasting, you can press “Start/Stop” button
-again to stop the broadcasting
+again to stop the broadcasting.
