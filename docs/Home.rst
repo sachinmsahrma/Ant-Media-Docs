@@ -19,17 +19,18 @@ Ant Media Server is an open source media server that supports:
 -  One-Time Token Control in **Enterprise Edition**
 -  Object Detection in **Enterprise Edition**
 
-.. note:: 
+.. important:: 
    Please join our community and ask your questions in this mail group:
    https://groups.google.com/forum/#!forum/ant-media-server
 
    You can also ask your questions at Stack Overflow with the ant-media-server tag.
-
+   
 .. admonition:: Important Links
-   .. Releases: http://www.python.org/ https://github.com/ant-media/Ant-Media-Server/releases/
-   .. Ant Media Web Site: https://antmedia.io
-   .. Community Edition vs. Enterprise Rdition: https://antmedia.io/#comparison_table
-   .. Contact: contact@antmedia.io
+
+   |  **Releases:** https://github.com/ant-media/Ant-Media-Server/releases/
+   |  **Ant Media Web Site:** https://antmedia.io
+   |  **Community Edition vs. Enterprise Edition:** https://antmedia.io/#comparison_table   
+   |  **Contact:** contact@antmedia.io
 
 .. |Build Status| image:: https://travis-ci.org/ant-media/Ant-Media-Server.svg?branch=master
    :target: https://travis-ci.org/ant-media/Ant-Media-Server
