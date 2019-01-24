@@ -1,4 +1,4 @@
-Ant Media Server ...
+.. include:: Home.rst
 
 Contents
 ========
