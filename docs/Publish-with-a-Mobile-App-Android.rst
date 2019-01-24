@@ -2,14 +2,14 @@ Let’s again have a look at step by step manner to make live broadcast
 from Android App
 
 Step 1 : Clone Git Repository
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ::
 
    git clone https://github.com/ant-media/LiveVideoBroadcaster.git
 
 Step 2 : Open the Project in Android Studio
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Open MainActivity.java file and assing the Server URL to
 ``RTMP_BASE_URL``. It should be in the format like
@@ -17,7 +17,7 @@ Open MainActivity.java file and assing the Server URL to
 apps in Ant Media Server. Change it if you have something different.
 
 Step 3: Run the App
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 When you run the app on an Android device, below screen should appear.
 Click Live Video Broadcaster button |Live Video broadcaster Main
