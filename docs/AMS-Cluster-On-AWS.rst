@@ -5,7 +5,8 @@ AMS Cluster On AWS
 General View of AMS Cluster
 ===========================
 
-image
+.. figure:: img/AMS-cluster-overview.png
+   :alt: AMS Cluster Overview
 
 Step 0: VPC Settings In AWS
 ---------------------------
