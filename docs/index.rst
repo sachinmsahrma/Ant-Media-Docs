@@ -1,4 +1,5 @@
 .. include:: Home.rst
+.. mdinclude:: https://raw.githubusercontent.com/ant-media/Ant-Media-Server/master/README.md
 
 Contents
 ========
