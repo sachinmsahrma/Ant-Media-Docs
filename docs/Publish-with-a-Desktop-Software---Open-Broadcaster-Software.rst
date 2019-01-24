@@ -1,7 +1,3 @@
-##############################
-Publish With Desktop Softwares
-##############################
-
 OBS(Open Broadcaster Softeware) is Free and open source software for
 video recording and live streaming. You can use either your PC’s
 embedded camera or externally connected one as a video source with OBS.
