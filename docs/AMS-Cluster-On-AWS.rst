@@ -19,6 +19,7 @@ Step 0: VPC Settings In AWS
 Step 1: Load Balancer Settings
 ------------------------------
 RTMP Load Balancing
+
 *  We will create Network Load Balancer for RTMP publishers. We must define a Listener and corresponding Target Group for each port.
 *  Firstly create a Target Groups with names Origin1935
 *  Set Network Load Balancer name as OriginRTMPLB
@@ -28,6 +29,7 @@ RTMP Load Balancing
 *  Finish the creation
 
 HTTP Load Balancing
+
 *  We will create Application Load Balancer for HTTP requests and websocket. We must define Listener and corresponding Target Group for each port.
 *  Firstly create a Target Groups with names Origin5080
 *  Set Network Load Balancer name as OriginHTTPLB
