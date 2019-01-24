@@ -15,7 +15,9 @@ To run Ant Media Server in DB Based Clustering please follow these steps.
   chmod 755 change_server_mode.sh
 
 * Run the command to restart Ant Media Server in DB based cluster mode.
-  ``sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>``
+::
+
+  sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>``
 
 .. note:: 
    Run the command to exit from cluster mode and restart Ant Media Server in standalone mode.
@@ -24,9 +26,7 @@ To run Ant Media Server in DB Based Clustering please follow these steps.
 Autoscaling
 -----------
 
-As new Ant Media Server instances started in DB Based Cluster mode, they are automatically added to the cluster. You can check nodes from Management Console.
-
-``http://<ANT_MEDIA_SERVER_NODE_k_IP>:5080/#/cluster``.
+As new Ant Media Server instances started in DB Based Cluster mode, they are automatically added to the cluster. You can check nodes from Management Console from ``http://<ANT_MEDIA_SERVER_NODE_k_IP>:5080/#/cluster``.
 
 How DB Based Cluster Works?
 ---------------------------
