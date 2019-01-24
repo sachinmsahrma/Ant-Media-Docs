@@ -9,7 +9,7 @@ To run Ant Media Server in DB Based Clustering please follow these steps.
 * Install Ant Media Server one or more server. You can look `here <https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started>`__.
 * Download the ``change_server_mode.sh`` shell script.
 
-.. code-block:: bash
+.. code-block::
    wget https://raw.githubusercontent.com/ant-media/Scripts/master/change_server_mode.sh
    chmod 755 change_server_mode.sh
 
