@@ -2,22 +2,28 @@ Enable DB Based Cluster Mode
 ----------------------------
 
 | To run Ant Media Server in DB Based Clustering please follow these
-  steps. \* Install MongoDB into a server. You can look
+  steps.
+  
+  * Install MongoDB into a server. You can look
   `here <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/>`__.
-  \* Set ``bind_ip`` value as ``0.0.0.0`` in ``/etc/mongod.conf`` file
+  
+  
+  * Set ``bind_ip`` value as ``0.0.0.0`` in ``/etc/mongod.conf`` file
   to let all connections to the MongoDB. \* Restart Mongodb(sudo service
   mongod restart) and make sure that you can connect to the MongoDB with
   something like ``mongo``
-| \* Install Ant Media Server one or more server. You can look
+  
+  * Install Ant Media Server one or more server. You can look
   `here <https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started>`__.
-  \* Download the ``change_server_mode.sh`` shell script.
+  
+  * Download the ``change_server_mode.sh`` shell script.
 
 ::
 
    wget https://raw.githubusercontent.com/ant-media/Scripts/master/change_server_mode.sh
    chmod 755 change_server_mode.sh
 
--  Run the command to restart Ant Media Server in DB based cluster mode.
+  * Run the command to restart Ant Media Server in DB based cluster mode.
 
 ``sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>``
 
@@ -40,10 +46,10 @@ Autoscaling
 How DB Based Cluster Works?
 ---------------------------
 
--  In this mode there are no multicast messages.
--  Newly started instance register it to the MongoDB.
--  When an instance starts to receive live stream, it register itself as
+*  In this mode there are no multicast messages.
+*  Newly started instance register it to the MongoDB.
+*  When an instance starts to receive live stream, it register itself as
    origin of the stream.
--  When the load balancer forwards a play request to any of the
+*  When the load balancer forwards a play request to any of the
    instances in the cluster, instance get the origin from MondoDB. It
    fetches live stream from the origin and send to audience.
