@@ -40,7 +40,3 @@ Low Latency Publish with RTMP & Play with WebRTC
 ================================================
 
 .. include:: Publish-with-RTMP-&-Play-with-WebRTC.rst
-
-
-
-
