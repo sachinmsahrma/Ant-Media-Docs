@@ -9,6 +9,7 @@ Sound sources also can be configured with it. Ant Media Server is fully
 compatible with OBS software.
 
 Let’s have a look at step by step how to use OBS for streaming: 
+
 Step 1 : Getting the OBS:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
