@@ -45,6 +45,8 @@ HLS
 Playing
 -------
 
+.. include:: Play-Live-and-VoD-Streams-and-Previews.rst
+
 Low Latency WebRTC Live Streaming
 =================================
 
