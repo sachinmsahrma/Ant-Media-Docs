@@ -1,3 +1,7 @@
+###
+FAQ
+###
+
 -  .. rubric:: `How to reset admin password?
       ? <https://github.com/ant-media/Ant-Media-Server/wiki/How-to-reset-Ant-Media-Server-admin-password%3F>`__
       :name: how-to-reset-admin-password
