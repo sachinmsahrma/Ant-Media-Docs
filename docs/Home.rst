@@ -19,7 +19,8 @@ Ant Media Server is an open source media server that supports:
 -  One-Time Token Control in **Enterprise Edition**
 -  Object Detection in **Enterprise Edition**
 
-.. note:: Community Please join and ask your questions in this mail group:
+.. admonition:: Community 
+   Please join and ask your questions in this mail group:
    https://groups.google.com/forum/#!forum/ant-media-server
 
    You can also ask your questions at Stack Overflow with the ant-media-server tag.
@@ -31,7 +32,7 @@ Ant Media Server is an open source media server that supports:
 
 Releases
 --------
-.. include:: https://raw.githubusercontent.com/ant-media/Ant-Media-Server/master/README.md
+.. Releases: http://www.python.org/ https://github.com/ant-media/Ant-Media-Server/releases/
 
 Contact
 -------
