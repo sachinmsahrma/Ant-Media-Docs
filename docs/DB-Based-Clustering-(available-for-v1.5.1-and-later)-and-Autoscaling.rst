@@ -9,13 +9,12 @@ To run Ant Media Server in DB Based Clustering please follow these steps.
 * Install Ant Media Server one or more server. You can look `here <https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started>`__.
 * Download the ``change_server_mode.sh`` shell script.
 
-::
-    wget https://raw.githubusercontent.com/ant-media/Scripts/master/change_server_mode.sh
-    chmod 755 change_server_mode.sh
+.. code-block:: bash
+   wget https://raw.githubusercontent.com/ant-media/Scripts/master/change_server_mode.sh
+   chmod 755 change_server_mode.sh
 
 * Run the command to restart Ant Media Server in DB based cluster mode.
-
-``sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>``
+  ``sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>``
 
 .. note:: 
    Run the command to exit from cluster mode and restart Ant Media Server in standalone mode.
