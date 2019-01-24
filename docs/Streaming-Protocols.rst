@@ -13,6 +13,11 @@ Peer-to-peer
 Conference
 ----------
 
+WebRTC Screen Sharing
+---------------------
+
+.. include:: WebRTC-Screen-Sharing.rst
+
 RTMP
 ====
 Publishing
@@ -49,3 +54,4 @@ Low Latency Publish with RTMP & Play with WebRTC
 ================================================
 
 .. include:: Publish-with-RTMP-&-Play-with-WebRTC.rst
+
