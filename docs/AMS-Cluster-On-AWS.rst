@@ -1,7 +1,3 @@
-##################
-AMS Cluster On AWS
-##################
-
 General View of AMS Cluster
 ===========================
 
