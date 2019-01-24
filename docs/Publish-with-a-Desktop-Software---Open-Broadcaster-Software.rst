@@ -7,13 +7,13 @@ compatible with OBS software.
 Let’s have a look at step by step how to use OBS for streaming: 
 
 Step 1 : Getting the OBS:
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Download via its official `web page <https://obsproject.com/>`__. It has
 Windows, Mac, and Linux releases.
 
 Step 2 : Provide Sources:
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: https://ant-media.github.io/Ant-Media-Server/doc/images/obs_screenshot.jpg
    :alt: OBS (Open Broadcaster Software) interface
@@ -26,7 +26,7 @@ section, such as an image can be broadcasted as a video source or
 external microphone can be added as a audio source.
 
 Step 3: Create RTMP URL for Ant Media Server
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  If your server configuration accepts any stream just use a RTMP URL
    like this “rtmp:///LiveApp/” Use IP address or server fqdn in the
@@ -48,7 +48,7 @@ Step 3: Create RTMP URL for Ant Media Server
    Management Console New Live Stream
 
 Step 4: Configure the OBS
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You need to write live stream parameters to OBS in order to start
 broadcasting. \* Click “Settings” then select “Stream” tab. \* Split the
@@ -62,7 +62,7 @@ ID should be written to Stream Key field not to the URL.
    OBS (Open Broadcaster Software) Stream Configuration
 
 Step 5: Start Stream and Watch 🙂
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Close settings window and just click the “Start Streaming” button in
    the main window of OBS. You can watch stream from either Ant Media
