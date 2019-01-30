@@ -84,7 +84,9 @@ Step 5: Create Auto Scaling Group
 *  Select subnet-1 as subnet
 *  Under Advanced Details enable Load Balancing and select origin5080 and origin1935 as target group.
 *  Select min and max numbers of nodes
-*  Set policy for new node creation rule. For example CPU usage > 70
+*  Click Scale the Auto Scaling group using step or simple scaling policies link
+   - Under Increase Group Size, click add new alarm and define policy as add an instance after CPU > 80. (uncheck "Send a notification to")
+   - Under Decrease Group Size, click add new alarm and define policy as remove an instance after CPU < 10. (uncheck "Send a notification to")
 *  Repeat steps for EdgeGroup
 *  After create Group AMS instances start to work.
 
