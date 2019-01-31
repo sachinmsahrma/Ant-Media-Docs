@@ -1,5 +1,5 @@
 General View of AMS Cluster
-===========================
+---------------------------
 
 .. figure:: img/AMS-cluster-overview.png
    :alt: AMS Cluster Overview
