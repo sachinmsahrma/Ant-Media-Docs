@@ -1,7 +1,7 @@
 .. include:: Home.rst
 
-Contents
-========
+User Guide
+==========
 .. toctree::
   :maxdepth: 2
 
@@ -18,5 +18,13 @@ Contents
   Security.rst
   Cloud-Deployments.rst
   Frequently-Asked-Questions.rst
-  DevelopersGuide.rst
+  
+Developers Guide
+==========
+.. toctree::
+  :maxdepth: 2
+
+  Build-From-Source.rst
+  DevGuide---Build-and-Update-Management-Web-Panel.rst
+  Amazon-(AWS)-S3-Integration.rst
   
