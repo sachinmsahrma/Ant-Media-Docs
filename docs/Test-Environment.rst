@@ -2,7 +2,11 @@ Test Environment
 ================
 
 Test environment has two parts: test server and SUT (system under test).
-We have two different setups for two different SUT. # One Instance Setup
+We have two different setups for two different SUT. 
+
+One Instance Setup
+------------------
+
 Here we have only one Ant Media Server instance as SUT.
 
 ::
@@ -26,7 +30,7 @@ Preparation of Setup:
    `here <https://github.com/ant-media/Ant-Media-Server/wiki/Preparation-of-Test-Server-and-Running-Tests>`__.
 
 Cluster Setup
-=============
+-------------
 
 Here we have a cluster structure as SUT which contains one origin and N
 edge servers.
