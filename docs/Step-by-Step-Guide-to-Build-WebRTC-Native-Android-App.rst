@@ -14,14 +14,16 @@ SDK. As a result download the SDK and open it to a directory that we
 will import it to Android App Project
 
 Creating Android Project
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Open Android Studio and Create a New Android Project
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Just Click **``File > New > New Project``** . A window should open as
 shown below for the project details. Fill the form according to your
 Organization and Project Name
+
+<img alt="Create Android Studio Project For WebRTC Native Android SDK" src="https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-08.05.59.png" width="800px" />
 
 Click Next button and Choose **``Phone and Tablet``** as below.
 
@@ -31,7 +33,7 @@ Let the default settings for activity name and layout. Click Next and
 finish creating the project.
 
 Import WebRTC SDK to Android Project
-------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After creating the project. Let’s import the WebRTC Android SDK to the
 project. For doing that click **``File > New > Import Module``** .
@@ -41,7 +43,7 @@ If module is not included in the project, add the module name into
 ``settings.gradle`` file as shown in the image below.
 
 Add dependency to Android Project App Module
---------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Right click ``app``, choose ``Open Module Settings``\ and click the
 ``Dependencies`` tab. Then a window should appear as below. Click the
@@ -50,15 +52,14 @@ Right click ``app``, choose ``Open Module Settings``\ and click the
 Choose WebRTC Native Android SDK and click OK button
 
 **CRITICAL thing about that** You need import Module as an **API** as shown in the image below. You can change it from **Implementation** to **API** in the drop down list
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 So let’s do other simple stuff.
 
 Prepare the App for Stream Publishing
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Set permissions for the App.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Set permissions for the App
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Open the AndroidManifest.xml and add below permissions between
 ``application`` and ``manifest``\ tag
@@ -84,7 +85,7 @@ Open the AndroidManifest.xml and add below permissions between
        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 Implement MainActivity ``onCreate`` function
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Open the MainActivity and implement it as below. You should change
 ``SERVER_URL`` according to your Ant Media Server address. Secondly, the
@@ -144,7 +145,7 @@ enabled, you should define ``tokenId`` parameter.
    }
 
 Edit the ``activity_main.xml`` as below
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: xml
 
@@ -169,7 +170,7 @@ Edit the ``activity_main.xml`` as below
    </FrameLayout>
 
 Build and Start the App
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 App directly publishes stream to the server before that we need to let
 the app has the permissions for that. Make sure that you let the app has
