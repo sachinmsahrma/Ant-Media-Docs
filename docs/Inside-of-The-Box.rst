@@ -1,15 +1,20 @@
+Inside of The Box
+=================
+
 What is in Docker Container?
 ----------------------------
 
-After building the dockerfile we get a docker image which contains all
-necessary software and artifacts for load test. ### Installed Softwares
-- *Java:* Used by JMeter and test web application. - *JMeter:* Used as
-test execution engine for load tests. - *FFmpeg:* Used for RTMP
-publishing and, RTMP and HLS playing. - *QT Libraries:* Necessary for
-WebRTCTest tool. - *Ant Media Tools:* WebRTCTest (used for both
-publishing and playing), RTMPClient (used for playing and measuring
-latency), Test web application (used for managing tests). - *Other:*
-gnuplot (to plot result graphs), jq (to read json from bash), unzip
+After building the dockerfile we get a docker image which contains all necessary software and artifacts for load test. 
+
+Installed Softwares
+~~~~~~~~~~~~~~~~~~~
+- **Java:** Used by JMeter and test web application. 
+- **JMeter:** Used as test execution engine for load tests. 
+- **FFmpeg:** Used for RTMP publishing and, RTMP and HLS playing. 
+- **QT Libraries:** Necessary for WebRTCTest tool. 
+- **Ant Media Tools:** WebRTCTest (used for both publishing and playing), RTMPClient (used for playing and measuring
+latency), Test web application (used for managing tests). 
+- **Other:** gnuplot (to plot result graphs), jq (to read json from bash), unzip
 
 Directory Structure
 ~~~~~~~~~~~~~~~~~~~
