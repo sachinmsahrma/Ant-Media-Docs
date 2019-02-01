@@ -23,11 +23,19 @@ Just Click **``File > New > New Project``** . A window should open as
 shown below for the project details. Fill the form according to your
 Organization and Project Name
 
-<img alt="Create Android Studio Project For WebRTC Native Android SDK" src="https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-08.05.59.png" width="800px" />
+.. figure:: https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-08.05.59.png
+   :alt: Create Android Studio Project For WebRTC Native Android SDK
 
 Click Next button and Choose **``Phone and Tablet``** as below.
 
+
+.. figure:: https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-08.06.08.png
+   :alt: WebRTC Native Android App
+
 Lastly Choose **``Empty Activity``** in the next window
+
+.. figure:: https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-09.19.11.png
+   :alt: Choose Empty Activity
 
 Let the default settings for activity name and layout. Click Next and
 finish creating the project.
@@ -39,8 +47,14 @@ After creating the project. Let’s import the WebRTC Android SDK to the
 project. For doing that click **``File > New > Import Module``** .
 Choose directory of the WebRTC Android SDK and click Finish button.
 
+.. figure:: https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-08.11.49.png
+   :alt: Import Native WebRTC Android SDK
+
 If module is not included in the project, add the module name into
 ``settings.gradle`` file as shown in the image below.
+
+.. figure:: https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-08.20.22-3.png
+   :alt: Import module in setting.gradle
 
 Add dependency to Android Project App Module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -49,9 +63,18 @@ Right click ``app``, choose ``Open Module Settings``\ and click the
 ``Dependencies`` tab. Then a window should appear as below. Click the
 ``+`` button at the bottom and choose \`Module Dependency`\`
 
+.. figure:: https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-09.34.56.png
+   :alt: Add Module Dependeny WebRTC Android SDK
+
 Choose WebRTC Native Android SDK and click OK button
 
+.. figure:: https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-08.21.06.png
+   :alt: Native WebRTC Android SDK
+
 **CRITICAL thing about that** You need import Module as an **API** as shown in the image below. You can change it from **Implementation** to **API** in the drop down list
+
+.. figure:: https://antmedia.io/wp-content/uploads/2018/07/Screen-Shot-2018-07-27-at-09.39.27.png
+   :alt: Choose API in drop down list
 
 So let’s do other simple stuff.
 
@@ -176,9 +199,13 @@ App directly publishes stream to the server before that we need to let
 the app has the permissions for that. Make sure that you let the app has
 permissions as shown below.
 
+.. figure:: https://antmedia.io/wp-content/uploads/2018/07/Screenshot_2018-07-27-08-56-45.png
+   :alt: Permissions
+
 Then restart the app and it should open the camera and start streaming.
 You should the see stream id in the screen as below. You can go to the
 ``http://SERVER_URL:5080/WebRTCAppEE/player.html``, write stream id to
 the text box and click Play button.
 
-
+.. figure:: https://antmedia.io/wp-content/uploads/2018/07/publishing_webrtc.png
+   :alt: Publish with WebRTC
