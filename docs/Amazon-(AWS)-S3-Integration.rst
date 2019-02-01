@@ -1,3 +1,6 @@
+AWS S3 Integration
+==================
+
 Amazon S3 Integration lets you upload your MP4 files and previews to S3
 automatically so that you do not need to worry about disk space in your
 server. Here is the simple manual how to enable S3 Integration to your
