@@ -3,7 +3,7 @@ between Ant Media Server and clients for publishing & playing streams.
 Let’s make it step by step
 
 Publishing WebRTC Stream
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Client connects to Ant Media Server through WebSocket. URL of the
    WebSocket interface is something like
@@ -79,7 +79,7 @@ Publishing WebRTC Stream
    }
 
 Playing WebRTC Stream
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 1. Client connects to Ant Media Server through WebSocket.
 
@@ -145,7 +145,7 @@ Playing WebRTC Stream
    }
 
 Peer to Peer WebRTC Stream
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Peers connects to Ant Media Server through WebSocket.
 
@@ -227,7 +227,7 @@ Server relays the answer sdp to the first peer
    }
 
 Conference WebRTC Stream
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Peers connects to Ant Media Server through WebSocket.
 
@@ -305,7 +305,7 @@ Client can update/remove the related video views from UI.
    }
 
 WebSocket Error Callbacks
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  ``noStreamNameSpecified``: it is sent when stream id is not specified
    in the message.
