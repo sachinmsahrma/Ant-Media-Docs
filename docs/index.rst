@@ -35,3 +35,14 @@ Developers Guide
   Load-Balancer-with-HAProxy-SSL-Termination.rst
   Building-and-Running-Docker-Container-for-Ant-Media-Server.rst
   
+Testers Guide
+================
+.. toctree::
+  :maxdepth: 2
+  :caption: TESTERS GUIDE
+
+  Test-Environment.rst
+  Preparation-of-Test-Server-and-Running-Tests.rst
+  Test-Plans.rst
+  Inside-of-The-Box.rst
+  
