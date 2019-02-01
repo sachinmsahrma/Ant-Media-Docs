@@ -7,20 +7,20 @@ app that provides this feature. If you do not know, how to do that drop
 an email to contact at antmedia dot io
 
 JavaScript SDK
---------------
+~~~~~~~~~~~~~~
 
 Of course there is a JavaScript SDK in order to make using signalling
 server straight forward. There is a sample peer.html file in the sample
 app, you can also try it to understand how to use JavaScript SDK
 
 How to use JavaScript SDK
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 JavaScript SDK is so easy, just create ``WebRTCAdaptor`` object and call
 ``join(roomName)`` function. Let’s see how to make it step by step
 
 Load the below scripts in head element of the html file.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 ::
 
@@ -32,7 +32,7 @@ Load the below scripts in head element of the html file.
    </head>
 
 Create video elements somewhere in the body tag
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""""""""""""""""""
 
 ::
 
@@ -43,7 +43,7 @@ First video tag is for local video and the second video tag for remote
 video.
 
 Initialize the \`WebRTCAdaptor object in script tag
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 
 ::
 
@@ -97,7 +97,7 @@ Initialize the \`WebRTCAdaptor object in script tag
    </script>
 
 Call ``join`` function
-^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""
 
 In order to create a connection between peers, each peer should join the
 same room by calling ``join(roomName)`` function of the WebRTCAdaptor.
@@ -122,7 +122,7 @@ they will joined the “room1” and peer to peer connection will be
 established.
 
 Functions
-^^^^^^^^^
+"""""""""
 
 As shown above, main object is WebRTCAdaptor so that let’s look at its
 functions
@@ -156,7 +156,7 @@ functions
    connection
 
 Sample
-^^^^^^
+""""""
 
 Please take a look at the WebRTCApp4/peer.html file in order to see How
 JavaScript SDK can be used
