@@ -12,8 +12,7 @@ Installed Softwares
 - **JMeter:** Used as test execution engine for load tests. 
 - **FFmpeg:** Used for RTMP publishing and, RTMP and HLS playing. 
 - **QT Libraries:** Necessary for WebRTCTest tool. 
-- **Ant Media Tools:** WebRTCTest (used for both publishing and playing), RTMPClient (used for playing and measuring
-latency), Test web application (used for managing tests). 
+- **Ant Media Tools:** WebRTCTest (used for both publishing and playing), RTMPClient (used for playing and measuring latency), Test web application (used for managing tests). 
 - **Other:** gnuplot (to plot result graphs), jq (to read json from bash), unzip
 
 Directory Structure
