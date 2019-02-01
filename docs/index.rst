@@ -18,4 +18,5 @@ Contents
   Security.rst
   Cloud-Deployments.rst
   Frequently-Asked-Questions.rst
+  DevelopersGuide.rst
   
