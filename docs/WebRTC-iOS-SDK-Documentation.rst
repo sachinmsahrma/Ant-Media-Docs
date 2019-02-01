@@ -7,7 +7,7 @@ in your application. This SDK supports three modes: Peer to peer, play
 and publish.
 
 Features
---------
+~~~~~~~~
 
 -  Fully written in Swift 4.
 -  Peer Connection: Two nodes connect to each other, 1-1 connection
@@ -19,7 +19,7 @@ Features
 -  Clear error messages
 
 Requirements
-------------
+~~~~~~~~~~~~
 
 In order to use this SDK, you need iOS 10+, WebRTC build, AntMedia
 WebRTC iOS SDK, Starscream library for signaling and Ant Media Server
@@ -28,7 +28,7 @@ provide WebRTC Android SDK and Enterprise Edition for trying or personal
 use.
 
 Installation
-------------
+~~~~~~~~~~~~
 
 -  We already built a version of WebRTC for iOS platform. Here is the
    link to download: https://antmedia.io/. After download, in Xcode,
@@ -112,7 +112,7 @@ Before to go, please do not forget to add Camera and Microphone usage
 description in Info.plist. Otherwise it will crash.
 
 Delegation
-~~~~~~~~~~
+^^^^^^^^^^
 
 There are 6 methods on AntMediaClientDelegate:
 
@@ -133,7 +133,7 @@ There are 6 methods on AntMediaClientDelegate:
    and microphone is ready to use.
 
 Support
--------
+~~~~~~~
 
 This SDK is still on the beta version. We appreciate if you share any
 experience with us. Please do not hesitate to open issue.
