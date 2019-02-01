@@ -3,7 +3,7 @@ WebRTC streams. In this document, we will show both how to publish and
 play WebRTC streams by using JavaScript SDK.
 
 How to Publish WebRTC stream with JavaScript SDK
-------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let’s see how to make it step by step
 
@@ -115,7 +115,7 @@ Please take a look at the WebRTCAppEE/index.html file in order to see
 How JavaScript SDK can be used for publishing a stream
 
 How to Play WebRTC stream with JavaScript SDK
----------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Load the below scripts in head element of the html file
 
