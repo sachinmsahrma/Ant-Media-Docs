@@ -2,7 +2,7 @@ This documentation is for developers who need to callbacks and their
 descriptions for WebRTC operations.
 
 JavaScript Error Callbacks
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  **``WebSocketNotSupported``**: WebSocket connection is not supported
    for environment or connection is not in the correct state.
