@@ -4,6 +4,7 @@ User Guide
 ==========
 .. toctree::
   :maxdepth: 2
+  :caption: USER GUIDE
 
   Getting-Started.rst
   Management-Console.rst
@@ -20,9 +21,10 @@ User Guide
   Frequently-Asked-Questions.rst
   
 Developers Guide
-==========
+================
 .. toctree::
   :maxdepth: 2
+  :caption: DEVELOPERS GUIDE
 
   Build-From-Source.rst
   DevGuide---Build-and-Update-Management-Web-Panel.rst
