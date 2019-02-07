@@ -14,43 +14,60 @@ Step 0: VPC Settings In AWS
    VPC and 3 subnets are available for new user.
    
 .. tip::
-   You can read `AWS Documentation <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html>`__ for details.
+   You can look at `AWS Documentation <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html>`__ for details about VPCs.
 
 Step 1: Create Security Groups
 ------------------------------
+*  Get IPv4 CIDR using VPC from VPC list. It is like as 172.31.0.0/16. Let say it VPC_CIDR.
 *  Create a security group with name Mongo-Security and inbound settings:
   *  Type: SSH, Protocol: TCP, Port:22, Source: Anywhere
-  *  Type: Custom TCP, Protocol: TCP, Port:27017, Source: Anywhere
+  *  Type: Custom TCP, Protocol: TCP, Port:27017, Source: VPC_CIDR
 *  Create a security group with name AMS-Security and inbound settings:
   *  Type: SSH, Protocol: TCP, Port:22, Source: Anywhere
-  *  Type: Custom TCP, Protocol: TCP, Port:5000, Source: Anywhere
-  *  Type: Custom TCP, Protocol: TCP, Port:5080, Source: Anywhere
+  *  Type:All Traffic, Source: VPC_CIDR (Actually this is enough)
+*  Create a security group with name WebRTC-Security and inbound settings:
+  *  Type: Custom UDP, Protocol: UDP, Port:X-Y, Source: Anywhere
+*  Create a security group with name LB-Security and inbound settings:
+  *  Type: Custom TCP, Protocol: TCP, Port:5080, Source: Anywhere  (for unsecure connection)
+  *  Type: Custom TCP, Protocol: TCP, Port:5443, Source: Anywhere  (for secure connection SSL) 
   *  Type: Custom TCP, Protocol: TCP, Port:1935, Source: Anywhere
-*  Create a security group with name OriginEdge-Sequrity and inbound settings:
-  *  Type:All Traffic, Source: Anywhere
   
-  .. danger::
-     This will be changed.
+.. tip::
+   You can look at `AWS Documentation <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html?icmpid=docs_ec2_console>`__ for details about Security Groups.
 
 Step 2: Load Balancer Settings
 ------------------------------
 HTTP Load Balancing
 
 *  We will create Application Load Balancer for HTTP requests and websocket. We must define Listener and corresponding Target Group for each port.
-*  Firstly create a Target Groups with names Origin5080
+*  Cirstly create a Target Groups with names Origin5080, protocol HTTP and port 5080
+*  Create a Target Groups with names Egde5080, protocol HTTP and port 5080
+*  After creation select groups, click set atributes the enable stickeness.
+
+.. tip::
+   You can look at `AWS Documentation <https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html>`__ for details about Target Groups.
+
 *  Set Network Load Balancer name as OriginHTTPLB
-*  Add Listeners for HTTP:5080
-*  Choose subnet-1 as Availability Zones
+*  For origins add Listener for HTTPS:443 (or if you don't need SSL then HTTP:80)
+*  For edges add Listeners for HTTPS:5443 (or if you don't need SSL then HTTP:5080)
+*  Choose subnet-1 and subnet-3 as Availability Zones
+*  Fill the SSL Certificate informations. (if you don't need SSL then skip this step)
 *  Select Origin5080 as Target Group.
-*  Set as sticky
 *  Finish the creation.
 
 .. important::
-   Repeat the steps for Edges by replacing Origin with Edge and subnet-1 with subnet-2.
-
-.. note::
-   We use two load balancer and we have two different addresses. Because NLB is layer 4 load balancer and we can not create sticky session. ALB is layer 7 load balancer but we can not create TCP:1935 listener. Instead of these two load balancers we could use Elastic Load Balancer (ELB) but is deprecated by AWS.
-  
+   We have one more step. Both listeners are forwarded to Origin5080. We forward 5443 (or 5080) listener to Edge5080. Select created load balancer under Listeners tab edit the 5443 (or 5080) listener as forward to Edge5080. 
+   Before:
+   .. figure:: img/AMS-cluster-overview.png
+      :alt: AMS Cluster Overview
+    
+   After:
+   .. figure:: img/AMS-cluster-overview.png
+      :alt: AMS Cluster Overview
+        
+.. tip::
+   You can look at `AWS Documentation <https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancer-getting-started.html>`__ for details about Application Load Balancers.        
+    
 Step 3: Create and Run Mongo Instance
 -------------------------------------
 *  Create an EC2 instance with AMS Mongo AMI
