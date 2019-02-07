@@ -30,6 +30,8 @@ Step 1: Create Security Groups
 *  Create a security group with name LB-Security and inbound settings:
   *  Type: Custom TCP, Protocol: TCP, Port:5080, Source: Anywhere  (for unsecure connection)
   *  Type: Custom TCP, Protocol: TCP, Port:5443, Source: Anywhere  (for secure connection SSL) 
+  *  Type: Custom HTTP, Protocol: TCP, Port:80, Source: Anywhere  (for unsecure connection)
+  *  Type: Custom HTTPS, Protocol: TCP, Port:443, Source: Anywhere  (for secure connection SSL) 
   *  Type: Custom TCP, Protocol: TCP, Port:1935, Source: Anywhere
   
 .. tip::
@@ -39,7 +41,7 @@ Step 2: Load Balancer Settings
 ------------------------------
 HTTP Load Balancing
 
-*  We will create Application Load Balancer for HTTP requests and websocket. We must define Listener and corresponding Target Group for each port.
+*  You should create Application Load Balancer for HTTP requests and websocket. You must define Listener and corresponding Target Group for each port.
 *  Cirstly create a Target Groups with names Origin5080, protocol HTTP and port 5080
 *  Create a Target Groups with names Egde5080, protocol HTTP and port 5080
 *  After creation select groups, click set atributes the enable stickeness.
@@ -82,6 +84,7 @@ Step 3: Create and Run Mongo Instance
    sudo service mongod start
 *  Select Mongo-Security as security group
 *  After creation note the private IP of instance. Let say it MongoIP.
+*  Finish the creation.
 
 .. tip::
    You can look at `AWS Documentation <https://docs.aws.amazon.com/efs/latest/ug/gs-step-one-create-ec2-resources.html>`__ and `this <https://aws.amazon.com/premiumsupport/knowledge-center/launch-instance-custom-ami>`__ for details about launching an instance using AMI.      
@@ -94,13 +97,17 @@ Step 4: Create Auto Scaling Launch Configuration
 ::
 
   #!/bin/bash
-  cd /home/ubuntu
+  cd /usr/local/antmedia
   ./change_server_mode.sh cluster <MongoIP>
   
-.. figure:: img/lb-forwarding-2.png
+.. figure:: img/launch-conf-1.png
       :alt: Auto Scaling Launch Configuration
       
 *  Select AMS-Security and WebRTC-Security as security group
+*  Finish the creation.
+
+.. warning::
+   Here we create one Launch Configuration for both origins and edges. But normally instances for origins and edges may be different. Origins should be more powerful. So we need to create seperate Launch Configurations. You can create one then copy and edit for the second.
 
 .. tip::
    You can look at `AWS Documentation <https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html>`__  for details about Auto Scaling Launch Configuration.    
@@ -116,26 +123,26 @@ Step 5: Create Auto Scaling Group
    - Under Increase Group Size, click add new alarm and define policy as add an instance after CPU > 80. (uncheck "Send a notification to")
    - Under Decrease Group Size, click add new alarm and define policy as remove an instance after CPU < 10. (uncheck "Send a notification to")
  
-.. figure:: img/lb-forwarding-2.png
+.. figure:: img/scaling-policy.png
       :alt: Auto Scaling Group
    
 *  Repeat steps for Edges
-*  After create Group AMS instances start to work.
+*  After creation of Group AMS, instances start to work.
 
 .. tip::
    You can look at `AWS Documentation <https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg.html>`__  for details about Auto Scaling Group. 
 
 Step 6: Test
 ------------
-*  Login Management console over Load Balancer
-*  Check the cluster page
-*  Publish a stream to Origin
-*  Play the stream from Edge
+*  Login Management console over https://<LoadBalancerDNS> (or http://<LoadBalancerDNS>)
+*  Check the cluster page and show nodes
+*  Publish a stream to Origin over https://<LoadBalancerDNS>/WebRTCAppEE (or http://<LoadBalancerDNS>/WebRTCAppEE)
+*  Play the stream from Edge over https://<LoadBalancerDNS>:5443/WebRTCAppEE/player.html (or http://<LoadBalancerDNS>:5080/WebRTCAppEE/player.html)
 
 
 RTMP Load Balancing (Optional)
 ------------------------------
-*  If we want to use RTMP publishing, we will create Network Load Balancer for RTMP publishers. We must define a Listener and corresponding Target Group for each port.
+*  If you want to use RTMP publishing, you should create Network Load Balancer for RTMP publishers. You must define a Listener and corresponding Target Group for each port.
 *  Firstly create a Target Groups with name Origin1935, protocol TCP and port 1935
 *  Set Network Load Balancer name as OriginRTMPLB
 *  Add Listeners for TCP:1935
