@@ -19,6 +19,7 @@ exclude_patterns = ['_build']
 pygments_style = 'sphinx'
 htmlhelp_basename = 'ant-media-docs'
 html_theme = 'sphinx_rtd_theme'
+html_theme_options = {'body_max_width': '70%'}
 file_insertion_enabled = False
 latex_documents = [
   ('index', 'ant-media-docs.tex', u'Ant Media Server Documentation',
