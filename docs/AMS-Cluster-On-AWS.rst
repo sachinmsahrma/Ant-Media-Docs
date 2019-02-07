@@ -61,13 +61,13 @@ HTTP Load Balancing
    
    Before:
    
-   .. figure:: img/AMS-cluster-overview.png
-      :alt: AMS Cluster Overview
+   .. figure:: img/lb-forwarding-1.png
+      :alt: AMS Cluster LB before
     
    After:
    
-   .. figure:: img/AMS-cluster-overview.png
-      :alt: AMS Cluster Overview
+   .. figure:: img/lb-forwarding-2.png
+      :alt: AMS Cluster LB after
         
 .. tip::
    You can look at `AWS Documentation <https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancer-getting-started.html>`__ for details about Application Load Balancers.        
@@ -76,13 +76,15 @@ Step 3: Create and Run Mongo Instance
 -------------------------------------
 *  Create an EC2 instance with AMS Mongo AMI
 *  Select subnet-3 as subnet
-*  Under Details write the followings in User Data as text:
+*  Under Details write the following in User Data as text:
 ::
 
-   sudo service mongod restart
+   sudo service mongod start
 *  Select Mongo-Security as security group
 *  After creation note the private IP of instance. Let say it MongoIP.
 
+.. tip::
+   You can look at `AWS Documentation <https://docs.aws.amazon.com/efs/latest/ug/gs-step-one-create-ec2-resources.html>`__ and `this <https://aws.amazon.com/premiumsupport/knowledge-center/launch-instance-custom-ami>`__ for details about launching an instance using AMI.      
 
 Step 4: Create Auto Scaling Launch Configuration
 ------------------------------------------------
@@ -94,27 +96,41 @@ Step 4: Create Auto Scaling Launch Configuration
   #!/bin/bash
   cd /home/ubuntu
   ./change_server_mode.sh cluster <MongoIP>
-*  Select AMS-Security and OriginEdge-Security as security group
+  
+.. figure:: img/lb-forwarding-2.png
+      :alt: Auto Scaling Launch Configuration
+      
+*  Select AMS-Security and WebRTC-Security as security group
+
+.. tip::
+   You can look at `AWS Documentation <https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html>`__  for details about Auto Scaling Launch Configuration.    
 
 Step 5: Create Auto Scaling Group
 ---------------------------------
 *  Select AMS-Cluster as launch configuration
-*  Set name as OriginGroup
+*  Set name as Origins
 *  Select subnet-1 as subnet
-*  Under Advanced Details enable Load Balancing and select origin5080 and origin1935 as target group.
+*  Under Advanced Details enable Load Balancing and select Origin5080 as target group.
 *  Select min and max numbers of nodes
 *  Click Scale the Auto Scaling group using step or simple scaling policies link
    - Under Increase Group Size, click add new alarm and define policy as add an instance after CPU > 80. (uncheck "Send a notification to")
    - Under Decrease Group Size, click add new alarm and define policy as remove an instance after CPU < 10. (uncheck "Send a notification to")
-*  Repeat steps for EdgeGroup
+ 
+.. figure:: img/lb-forwarding-2.png
+      :alt: Auto Scaling Group
+   
+*  Repeat steps for Edges
 *  After create Group AMS instances start to work.
+
+.. tip::
+   You can look at `AWS Documentation <https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg.html>`__  for details about Auto Scaling Group. 
 
 Step 6: Test
 ------------
-*  Login Management console over Origin or Edge Load Balancer Ip
+*  Login Management console over Load Balancer
 *  Check the cluster page
-*  Publish a stream to OriginLB Ip
-*  Play the stream from EdgeLB Ip
+*  Publish a stream to Origin
+*  Play the stream from Edge
 
 
 RTMP Load Balancing (Optional)
