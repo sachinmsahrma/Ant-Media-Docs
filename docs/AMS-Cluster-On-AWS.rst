@@ -14,7 +14,7 @@ Step 0: VPC Settings In AWS
    VPC and 3 subnets are available for new user.
    
 .. tip::
-   You can read `_AWS Documentation <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html>` for details.
+   You can read `AWS Documentation <https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html>`__ for details.
 
 Step 1: Create Security Groups
 ------------------------------
