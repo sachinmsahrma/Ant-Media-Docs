@@ -127,17 +127,20 @@ Step 5: Create Auto Scaling Group
       :alt: Auto Scaling Group
    
 *  Repeat steps for Edges
-*  After creation of Group AMS, instances start to work.
+*  After creation of Auto Scaling Group, AMS instances start.
 
 .. tip::
    You can look at `AWS Documentation <https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg.html>`__  for details about Auto Scaling Group. 
 
 Step 6: Test
 ------------
-*  Login Management console over https://<LoadBalancerDNS> (or http://<LoadBalancerDNS>)
+*  Login Management console over 
+``https://<LoadBalancerDNS> (or http://<LoadBalancerDNS>)``
 *  Check the cluster page and show nodes
-*  Publish a stream to Origin over https://<LoadBalancerDNS>/WebRTCAppEE (or http://<LoadBalancerDNS>/WebRTCAppEE)
-*  Play the stream from Edge over https://<LoadBalancerDNS>:5443/WebRTCAppEE/player.html (or http://<LoadBalancerDNS>:5080/WebRTCAppEE/player.html)
+*  Publish a stream to Origin over 
+``https://<LoadBalancerDNS>/WebRTCAppEE (or http://<LoadBalancerDNS>/WebRTCAppEE)``
+*  Play the stream from Edge over 
+``https://<LoadBalancerDNS>:5443/WebRTCAppEE/player.html (or http://<LoadBalancerDNS>:5080/WebRTCAppEE/player.html)``
 
 
 RTMP Load Balancing (Optional)
