@@ -53,15 +53,19 @@ HTTP Load Balancing
 *  Choose subnet-1 and subnet-3 as Availability Zones
 *  Fill the SSL Certificate informations. (if you don't need SSL then skip this step)
 *  Select Origin5080 as Target Group.
+*  Select LB-Security as Security Group.
 *  Finish the creation.
 
-.. important::
+.. warning::
    We have one more step. Both listeners are forwarded to Origin5080. We forward 5443 (or 5080) listener to Edge5080. Select created load balancer under Listeners tab edit the 5443 (or 5080) listener as forward to Edge5080. 
+   
    Before:
+   
    .. figure:: img/AMS-cluster-overview.png
       :alt: AMS Cluster Overview
     
    After:
+   
    .. figure:: img/AMS-cluster-overview.png
       :alt: AMS Cluster Overview
         
@@ -77,7 +81,8 @@ Step 3: Create and Run Mongo Instance
 
    sudo service mongod restart
 *  Select Mongo-Security as security group
-*  After creation note the private IP of instance. Let say it MongoIP. 
+*  After creation note the private IP of instance. Let say it MongoIP.
+
 
 Step 4: Create Auto Scaling Launch Configuration
 ------------------------------------------------
