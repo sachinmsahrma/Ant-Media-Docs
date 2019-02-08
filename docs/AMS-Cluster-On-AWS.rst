@@ -44,7 +44,7 @@ HTTP Load Balancing
 *  You should create Application Load Balancer for HTTP requests and websocket. You must define Listener and corresponding Target Group for each port.
 *  Cirstly create a Target Groups with names Origin5080, protocol HTTP and port 5080
 *  Create a Target Groups with names Egde5080, protocol HTTP and port 5080
-*  After creation select groups, click set atributes the enable stickeness.
+*  After creation, select the group, click set atributes and then enable stickeness.
 
 .. tip::
    You can look at `AWS Documentation <https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html>`__ for details about Target Groups.
@@ -135,7 +135,7 @@ Step 5: Create Auto Scaling Group
 Step 6: Test
 ------------
 *  Login Management console over 
-   ``https://<LoadBalancerDNS>``
+   `https://<LoadBalancerDNS>`
    
    ``(or http://<LoadBalancerDNS>)``
 *  Check the cluster page and show nodes
