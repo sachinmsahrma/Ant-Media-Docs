@@ -143,7 +143,7 @@ Step 6: Test
    ``(or http://<LoadBalancerDNS>/WebRTCAppEE)``
 *  Play the stream from Edge over 
    ``https://<LoadBalancerDNS>:5443/WebRTCAppEE/player.html``
-  ``(or http://<LoadBalancerDNS>:5080/WebRTCAppEE/player.html)``
+   ``(or http://<LoadBalancerDNS>:5080/WebRTCAppEE/player.html)``
 
 
 RTMP Load Balancing (Optional)
