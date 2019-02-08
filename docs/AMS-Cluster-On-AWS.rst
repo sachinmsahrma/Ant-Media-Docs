@@ -135,7 +135,7 @@ Step 5: Create Auto Scaling Group
 Step 6: Test
 ------------
 *  Login Management console over 
-   `https://<LoadBalancerDNS>`
+   ``https://<LoadBalancerDNS>``
    
    ``(or http://<LoadBalancerDNS>)``
 *  Check the cluster page and show nodes
