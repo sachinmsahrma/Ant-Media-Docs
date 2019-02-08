@@ -135,15 +135,15 @@ Step 5: Create Auto Scaling Group
 Step 6: Test
 ------------
 *  Login Management console over 
-``https://<LoadBalancerDNS> (or http://<LoadBalancerDNS>)``
-
+   ``https://<LoadBalancerDNS>``
+   ``(or http://<LoadBalancerDNS>)``
 *  Check the cluster page and show nodes
 *  Publish a stream to Origin over 
-``https://<LoadBalancerDNS>/WebRTCAppEE (or http://<LoadBalancerDNS>/WebRTCAppEE)``
-
+   ``https://<LoadBalancerDNS>/WebRTCAppEE``
+   ``(or http://<LoadBalancerDNS>/WebRTCAppEE)``
 *  Play the stream from Edge over 
-``https://<LoadBalancerDNS>:5443/WebRTCAppEE/player.html 
-  (or http://<LoadBalancerDNS>:5080/WebRTCAppEE/player.html)``
+   ``https://<LoadBalancerDNS>:5443/WebRTCAppEE/player.html``
+  ``(or http://<LoadBalancerDNS>:5080/WebRTCAppEE/player.html)``
 
 
 RTMP Load Balancing (Optional)
