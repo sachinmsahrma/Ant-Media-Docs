@@ -46,7 +46,7 @@ Webhook Integration
 
 Configuration Settings
 ======================
-.. include:: Configuration.rst
+.. include:: Configurations.rst
 
 Rest Api Doc
 ============
