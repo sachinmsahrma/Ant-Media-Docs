@@ -114,7 +114,7 @@ The table below summarises the available settings. Some settings don't have to b
 +---------------------------------------------+----------------------------------------------------------------------------------+ 
 | settings.encoding.rc                        | Please check https://trac.ffmpeg.org/wiki/Encode/H.264                           | 
 +---------------------------------------------+----------------------------------------------------------------------------------+ 
-| settings.encoding.specific                  | Specific settings for selected encoder. For libx264 please check                 |
+| settings.encoding.specific                  | Specific settings for selected encoder. For libx264 please check \                 |
 |                                             | https://trac.ffmpeg.org/wiki/Encode/H.264                                        | 
 +---------------------------------------------+----------------------------------------------------------------------------------+ 
 | settings.remoteAllowedCIDR                  | Allowed IP addresses to reach REST API. It must be in CIDR format as a.b.c.d/x   | 
@@ -132,9 +132,9 @@ The table below summarises the available settings. Some settings don't have to b
 +---------------------------------------------+----------------------------------------------------------------------------------+ 
 | db.password                                 | MongoDB password. Left as blank if no user credentials.                          | 
 +---------------------------------------------+----------------------------------------------------------------------------------+ 
-| webapp.dbName                               | no need this settings                                                            | 
+| webapp.dbName                               | no need this setting                                                             | 
 +---------------------------------------------+----------------------------------------------------------------------------------+ 
-| webapp.contextPath                          | no need this settings                                                            | 
+| webapp.contextPath                          | no need this setting                                                             | 
 +---------------------------------------------+----------------------------------------------------------------------------------+ 
 | webapp.virtualHosts                         | always *                                                                         | 
 +---------------------------------------------+----------------------------------------------------------------------------------+ 
