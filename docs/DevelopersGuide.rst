@@ -44,6 +44,10 @@ Webhook Integration
 ===================
 .. include:: Webhook-Integration:-No-worry,-We'll-call-you.rst
 
+Configuration Settings
+======================
+.. include:: Configuration.rst
+
 Rest Api Doc
 ============
 .. _Rest Api Doc:https://antmedia.io/swagger/swagger.html
