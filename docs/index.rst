@@ -31,6 +31,7 @@ Developers Guide
   WebRTC-Developers.rst
   Amazon-(AWS)-S3-Integration.rst
   Webhook-Integration.rst
+  Configurations.rst
   Rest-Api.rst
   Load-Balancer-with-HAProxy-SSL-Termination.rst
   Building-and-Running-Docker-Container-for-Ant-Media-Server.rst
