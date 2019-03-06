@@ -5,8 +5,14 @@ User Guide
 .. toctree::
   :maxdepth: 2
   :caption: USER GUIDE
-
+  
   Getting-Started.rst
+  Streaming-Protocols.rst
+  Connecting-Stream-Sources.rst
+  Scaling-and-Load-Balancing.rst
+  Cloud-Deployments.rst
+
+..  Getting-Started.rst
   Management-Console.rst
   Applications.rst
   Streaming-Protocols.rst
