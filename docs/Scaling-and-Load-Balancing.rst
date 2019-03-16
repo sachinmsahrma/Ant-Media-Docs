@@ -11,3 +11,8 @@ Load Balancer with HAProxy SSL Termination
 ==========================================
 
 .. include:: Load-Balancer-with-HAProxy-SSL-Termination.rst
+
+Clustering with Azure
+=====================
+
+.. include:: Clustering-with-Azure.rst
