@@ -1,4 +1,3 @@
-` <>`_
 Clustering with Azure
 ---------------------
 This document is a guide for setting up clustering in Azure platform.
@@ -103,18 +102,23 @@ Create an Application Gateway described as
 3. Click HTTP Settings and add a new one as seen below:
 
 .. image:: img/azure_httpsettings.png
+  :width: 150
 4. Click Rules.
 5. Create http_5080_edge as seen below:
 
 .. image:: img/azure_rule_http_5080_edge.png
+  :width: 150
 6. Create http_80_origin as seen below:
 
 .. image:: img/azure_rule_http_80_origin.png
+  :width: 150
 7. Create https_5443_edge as seen below:
 
 .. image:: img/azure_rule_https_5443_edge.png
+  :width: 150
 8. Create https_443_origin as seen below:
 
 .. image:: img/azure_rule_https_443_origin.png
+  :width: 150
 
 This completes the setup.
