@@ -6,7 +6,7 @@ This document is a guide for setting up clustering in Azure platform.
 | Having an Azure account and a ready AntMedia Server Image.
 |
 | Architecture of cluster setup could be found `here <Test-Environment.rst>`_.
-| Introduction to clustering with Antmedia Serve could be found `here <Clustering.rst>`_.
+| Introduction to clustering with AntMedia Server could be found `here <Clustering.rst>`_.
 
 Step 1: Create a Virtual network
 --------------------------------
@@ -102,23 +102,23 @@ Create an Application Gateway described as
 3. Click HTTP Settings and add a new one as seen below:
 
 .. image:: img/azure_httpsettings.png
-  :width: 150
+  :width: 100
 4. Click Rules.
 5. Create http_5080_edge as seen below:
 
 .. image:: img/azure_rule_http_5080_edge.png
-  :width: 150
+  :width: 100
 6. Create http_80_origin as seen below:
 
 .. image:: img/azure_rule_http_80_origin.png
-  :width: 150
+  :width: 100
 7. Create https_5443_edge as seen below:
 
 .. image:: img/azure_rule_https_5443_edge.png
-  :width: 150
+  :width: 100
 8. Create https_443_origin as seen below:
 
 .. image:: img/azure_rule_https_443_origin.png
-  :width: 150
+  :width: 100
 
 This completes the setup.
