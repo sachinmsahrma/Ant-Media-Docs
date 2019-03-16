@@ -1,5 +1,3 @@
-Clustering with Azure
----------------------
 This document is a guide for setting up clustering in Azure platform.
 
 | **Requirements:**
