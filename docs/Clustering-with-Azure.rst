@@ -32,15 +32,18 @@ Step 5: Create a Virtual Machine for AntMedia
 ---------------------------------------------
 1. In All Resources, select your AntMedia image and click Create VM in the upper bar.
 2. In Basic tab
+
  - Enter virtual machine name.
  - Enter your SSH public key if the authentication type is SSH public key.
  - Select a VM size.
 3. Skip Disks tab.
 4. In Networking tab:
+
  - Select antmediaserver as virtual network.
  - Select edge-subnet as a Subnet.
  - Select the antmediaserver-ip public ip address which is created before.
 5. In Management tab:
+
  - Select your diagnotics Storage account which is mediastorage.
 6. Skip other tabs and click Create and create a virtual machine.
 
@@ -62,6 +65,7 @@ Step 7: Create Scale Sets
 1. We need to setup scale sets. We need an image for this. So go to VM that you created and click Capture. Enter a name and select the resource group that you created before.
 2. Click Create a Resource which is on the top left and search for virtual machine scale set. Select virtual machine scale set in the list and click create.
 3. Create edgescale scale set:
+
  - Enter a scale set name "edgescale".
  - Set Availability zone to None.
  - Set username.
@@ -74,6 +78,7 @@ Step 7: Create Scale Sets
  - Enable public IP address per instance.
  - Click create.
 4. Create a scale set for origin:
+
  - Enter a scale set name "originscale"
  - Click browse all images and in my items tab select the image that you created.
  - Set username.
