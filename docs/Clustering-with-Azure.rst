@@ -32,16 +32,16 @@ Step 5: Create a Virtual Machine for AntMedia
 ---------------------------------------------
 1. In All Resources, select your AntMedia image and click Create VM in the upper bar.
 2. In Basic tab
-   - Enter virtual machine name.
-   - Enter your SSH public key if the authentication type is SSH public key.
-   - Select a VM size.
+ - Enter virtual machine name.
+ - Enter your SSH public key if the authentication type is SSH public key.
+ - Select a VM size.
 3. Skip Disks tab.
 4. In Networking tab:
-   - Select antmediaserver as virtual network.
-   - Select edge-subnet as a Subnet.
-   - Select the antmediaserver-ip public ip address which is created before.
+ - Select antmediaserver as virtual network.
+ - Select edge-subnet as a Subnet.
+ - Select the antmediaserver-ip public ip address which is created before.
 5. In Management tab:
-   - Select your diagnotics Storage account which is mediastorage.
+ - Select your diagnotics Storage account which is mediastorage.
 6. Skip other tabs and click Create and create a virtual machine.
 
 Step 6: Setup AntMedia in VM
@@ -62,29 +62,29 @@ Step 7: Create Scale Sets
 1. We need to setup scale sets. We need an image for this. So go to VM that you created and click Capture. Enter a name and select the resource group that you created before.
 2. Click Create a Resource which is on the top left and search for virtual machine scale set. Select virtual machine scale set in the list and click create.
 3. Create edgescale scale set:
-   - Enter a scale set name "edgescale".
-   - Set Availability zone to None.
-   - Set username.
-   - Set SSH public key.
-   - Set instance count to minimum number that you need.
-   - Select a VM size.
-   - Enable AutoScale with min and max instance numbers.
-   - Select Application Gateway as load balancer.
-   - Select edge-subnet as subnet which is created before.
-   - Enable public IP address per instance.
-   - Click create.
+ - Enter a scale set name "edgescale".
+ - Set Availability zone to None.
+ - Set username.
+ - Set SSH public key.
+ - Set instance count to minimum number that you need.
+ - Select a VM size.
+ - Enable AutoScale with min and max instance numbers.
+ - Select Application Gateway as load balancer.
+ - Select edge-subnet as subnet which is created before.
+ - Enable public IP address per instance.
+ - Click create.
 4. Create a scale set for origin:
-   - Enter a scale set name "originscale"
-   - Click browse all images and in my items tab select the image that you created.
-   - Set username.
-   - Set SSH public key.
-   - Set instance count to 1.
-   - Select a VM size.
-   - Enable AutoScale with min and max instance numbers.
-   - Select Application Gateway as load balancer.
-   - Select origin-subnet as subnet which is created before.
-   - Enable public IP address per instance.
-   - Click create.
+ - Enter a scale set name "originscale"
+ - Click browse all images and in my items tab select the image that you created.
+ - Set username.
+ - Set SSH public key.
+ - Set instance count to 1.
+ - Select a VM size.
+ - Enable AutoScale with min and max instance numbers.
+ - Select Application Gateway as load balancer.
+ - Select origin-subnet as subnet which is created before.
+ - Enable public IP address per instance.
+ - Click create.
 
 Step 8: Create Application Gateway
 ----------------------------------
@@ -100,23 +100,23 @@ Create an Application Gateway described as
 3. Click HTTP Settings and add a new one as seen below:
 
 .. image:: img/azure_httpsettings.png
-  :width: 100
+  :width: 150
 4. Click Rules.
 5. Create http_5080_edge as seen below:
 
 .. image:: img/azure_rule_http_5080_edge.png
-  :width: 100
+  :width: 150
 6. Create http_80_origin as seen below:
 
 .. image:: img/azure_rule_http_80_origin.png
-  :width: 100
+  :width: 150
 7. Create https_5443_edge as seen below:
 
 .. image:: img/azure_rule_https_5443_edge.png
-  :width: 100
+  :width: 150
 8. Create https_443_origin as seen below:
 
 .. image:: img/azure_rule_https_443_origin.png
-  :width: 100
+  :width: 150
 
 This completes the setup.
