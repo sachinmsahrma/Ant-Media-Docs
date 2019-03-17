@@ -59,6 +59,7 @@ Step 6: Setup AntMedia in VM
 4. Use ssh and connect to this VM.
 5. Download the AntMedia Server zip file and setup using this `script <https://raw.githubusercontent.com/ant-media/Scripts/master/install_ant-media-server.sh>`_.
 6. Run this `script <https://raw.githubusercontent.com/ant-media/Scripts/master/change_server_mode.sh>`_.
+
 ::
 
   sudo ./change_server_mode.sh cluster <MONGO_SERVER_IP>
