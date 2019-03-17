@@ -1,5 +1,3 @@
-.. _`Test Environment`:
-
 Test Environment
 ================
 
