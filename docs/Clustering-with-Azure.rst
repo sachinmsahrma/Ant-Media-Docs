@@ -26,7 +26,7 @@ Name it mediastorage.
 Step 4: Create a MongoDB Virtual Machine
 ----------------------------------------
 Create a virtual machine with MongoDB as described
-`here <https://github.com/ant-media/Ant-Media-Server/wiki/DB-Based-Clustering-(available-for-v1.5.1-and-later)-and-Autoscaling>`_.
+`here <http://docs.antmedia.io/en/latest/Scaling-and-Load-Balancing.html#db-based-clustering-and-autoscaling>`_.
 
 Step 5: Create a Virtual Machine for AntMedia
 ---------------------------------------------
