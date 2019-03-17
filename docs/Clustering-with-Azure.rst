@@ -3,7 +3,7 @@ This document is a guide for setting up clustering in Azure platform.
 | **Requirements:**
 | Having an Azure account and a ready AntMedia Server Image.
 |
-| Architecture of cluster setup could be found `here <Test Environment>`_.
+| Architecture of cluster setup could be found `Test Environment`_.
 | Introduction to clustering with AntMedia Server could be found `here <Clustering.rst>`_.
 
 Step 1: Create a Virtual network
