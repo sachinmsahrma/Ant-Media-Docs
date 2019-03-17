@@ -49,7 +49,9 @@ Step 5: Create a Virtual Machine for AntMedia
 
 Step 6: Setup AntMedia in VM
 ----------------------------
-.. warning::Be aware that it may take some time for the new VM to start up.
+
+.. warning::
+   Be aware that it may take some time for the new VM to start up.
 
 1. In All resources, click the VM that you created and note the public IP address.
 2. We need to open port 22 for connecting with ssh. In networking section, click Add inbound port. Enter 22 for Destinations port ranges. Select Any as protocol. Enter 100 as Priorty. Give a name such as Port_22.
