@@ -1,4 +1,3 @@
-.. _test-environment-label:
 Test Environment
 ================
 
