@@ -1,8 +1,9 @@
+.. _test-environment-label:
 Test Environment
 ================
 
 Test environment has two parts: test server and SUT (system under test).
-We have two different setups for two different SUT. 
+We have two different setups for two different SUT.
 
 One Instance Setup
 ------------------
