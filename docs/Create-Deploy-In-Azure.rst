@@ -2,22 +2,22 @@ This guide describes how to install and set up Ant Media Server on a Microsoft A
 
 Step 1: Create a Virtual Machine
 --------------------------------
-Firstly, click Create a resource in Azure Dashboard.
+Firstly, click Create a resource in `Azure Dashboard <https://portal.azure.com>`_.
 
 .. figure:: https://antmedia.io/wp-content/uploads/2019/03/create-resource-azure-marketplace.jpg
    :alt: Create a resource in Azure Dashboard
  
-After clicking on Create a resouce, you will see the new Marketplace page. We are writing “Ant Media Server” to the search side. 
+After clicking on Create a resouce, you will see the new Marketplace page. Please write “Ant Media Server” to the search side. 
 
 .. figure:: https://antmedia.io/wp-content/uploads/2019/03/ant-media-server-azure-marketplace-listing.jpg
    :alt: Azure Marketplace listing Ant Media Server
 
-Choose one of them Ant Media Server Community Edition or Enterprise Edition. 
+Choose one of Ant Media Server Community Edition or Enterprise Edition.
 
 .. figure:: https://antmedia.io/wp-content/uploads/2019/03/azure-marketplace-ant-media-server.jpg
    :alt: Azure Marketplace listing Ant Media Server
 
-Community Edition and Enterprise Edition comparison chart can see link `here <https://antmedia.io/#comparison_table>`_.
+Community Edition and Enterprise Edition comparison chart is `here <https://antmedia.io/#comparison_table>`_.
 
 Step 2: Customize Virtual Machine
 --------------------------------
@@ -26,7 +26,7 @@ Part 1 – “Basics” in Create a Vitual Machine
 .. figure:: https://antmedia.io/wp-content/uploads/2019/03/basics-in-azure-marketplace.jpg
    :alt: Basics section in Azure Marketplace Virtual Machine
 
-**In Subscription**, Azure default payment method is Pay-As-You-Go. More details see this `link <https://azure.microsoft.com/en-us/offers/ms-azr-0003p>`_.
+**In Subscription**, Azure default payment method is Pay-As-You-Go. More details for see this `link <https://azure.microsoft.com/en-us/offers/ms-azr-0003p>`_.
 
 **In Resource group**, specify the resource group. To select an existing resource group, click Use existing, and then click the arrow in the list box to reveal existing resource groups. To create a new resource group, click Create new, and then type a name for it in the list box. For details, see Manage resource groups.  
 
@@ -34,7 +34,7 @@ Part 1 – “Basics” in Create a Vitual Machine
 
 **In Region**, select the region where the virtual machine instance will be located. It's best to select a location that has the lowest latency to a camera or encoder that's delivering a live stream to Ant Medai Server.
 
-**In Image**, image you selected will appear here. You can browse
+**In Image**, will see your selected image.
 
 **In VM disk type**, choose a disk type. Azure solid state disks (SSD) are backed by solid state drives and offer consistent, low latency performance. They provide the best balance between price and performance and are ideal for I/O-intensive applications and production workloads. 
 
@@ -54,6 +54,7 @@ Standard SSD Disks are a cost effective storage option optimized for workloads t
 
 Use Standard HDD disks for Dev/Test scenarios and less critical workloads at lowest cost.
 
+.. tip::
 We recommend Premium SSD for high I/O.
 
 Part 3 – “Networking”  in Create a Vitual Machine
@@ -70,17 +71,14 @@ Part 3 – “Networking”  in Create a Vitual Machine
 
 **In Configure network security group**, the most important configuration is here. Here is the TCP and UDP port, inbound and outbound permissions are configured. If you change port setting in Ant Media Server, you need to change “Configure network security group”. Ant Media Server default port value is here (link)
 
+.. warning::
 **The following ports to the Inbound list in Ant Media Server:**
 
-TCP:1935 (RTMP)
-
-TCP:5080 (HTTP)
-
-TCP:5443 (HTTPS)
-
-TCP:5554 (RTSP)
-
-UDP:5000-65000 (WebRTC and RTSP)
+* TCP:1935 (RTMP)
+* TCP:5080 (HTTP)
+* TCP:5443 (HTTPS)
+* TCP:5554 (RTSP)
+* UDP:5000-65000 (WebRTC and RTSP)
 
 Part 4 – “Management” in Create Virtual Machine
 ^^^^^^^^^^^^^^^^^^^^^
