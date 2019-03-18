@@ -120,4 +120,4 @@ Checking all the settings you can create the virtual machine.
 
 After creating the instance, wait for installation and reach management console from the URL: http://<Server_IP_Address>:5080 .
 
-If you have any question, contact us from the `website <https://antmedia.io/#contact>`_..I hope this tutorial has been useful to you.
+If you have any question, contact us from the `website <https://antmedia.io/#contact>`_.I hope this tutorial has been useful to you.
