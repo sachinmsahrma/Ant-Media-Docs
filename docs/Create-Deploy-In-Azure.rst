@@ -1,3 +1,5 @@
+General Steps Deploy on Azure Portal
+---------------------------
 This guide describes how to install and set up Ant Media Server on a Microsoft Azure Marketplace  Ubuntu 16.04 virtual machine instance. This tutorial assumes that you have an Azure account, or a trial account.
 
 Step 1: Create a Virtual Machine
