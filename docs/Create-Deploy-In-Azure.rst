@@ -62,7 +62,7 @@ Use Standard HDD disks for Dev/Test scenarios and less critical workloads at low
 .. tip::
 	We recommend Premium SSD for high I/O.
 
-Part 3 – “Networking”  in Create a Vitual Machine
+Part 3 – “Networking”  in Create a Virtual Machine
 ^^^^^^^^^^^^^^^^^^^^^ 
 
 .. figure:: https://antmedia.io/wp-content/uploads/2019/03/networking-in-azure-marketplace.jpg
@@ -116,4 +116,8 @@ Part 7 – “Review + Create” in Create Virtual Machine
    :alt: Review + Create section in Azure Marketplace Virtual Machine
 
 Here you will see the settings you have made in other sections.
-After checking all the settings you can create the virtual machine.
+Checking all the settings you can create the virtual machine.
+
+After creating the instance, wait for installation and reach management console from the URL: http://<Server_IP_Address>:5080 .
+
+If you have any question, contact us from the `website <https://antmedia.io/#contact>`_..I hope this tutorial has been useful to you.
