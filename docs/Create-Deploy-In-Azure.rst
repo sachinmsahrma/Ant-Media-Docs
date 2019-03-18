@@ -19,7 +19,8 @@ Choose one of Ant Media Server Community Edition or Enterprise Edition.
 .. figure:: https://antmedia.io/wp-content/uploads/2019/03/azure-marketplace-ant-media-server.jpg
    :alt: Azure Marketplace listing Ant Media Server
 
-Community Edition and Enterprise Edition comparison chart is `here <https://antmedia.io/#comparison_table>`_.
+.. tip::
+	Community Edition and Enterprise Edition comparison chart is `here <https://antmedia.io/#comparison_table>`_.
 
 Step 2: Customize Virtual Machine
 --------------------------------
@@ -41,7 +42,9 @@ Part 1 – “Basics” in Create a Virtual Machine
 **In VM disk type**, choose a disk type. Azure solid state disks (SSD) are backed by solid state drives and offer consistent, low latency performance. They provide the best balance between price and performance and are ideal for I/O-intensive applications and production workloads. 
 
 **In User name**, type the name of the account that you'll use to administer the virtual machine (you can't use root for the user name). Then under Authentication type, click SSH public key and copy and paste an OpenSSH public key that will be used to authenticate the account user name.
-Note: You can generate an OpenSSH public key with tools like ssh-keygen on Linux and OS X or PuTTYgen on Windows. For details, see Create and use an SSH public-private key pair for Linux VMs in Azure.
+
+.. tip::
+	Note: You can generate an OpenSSH public key with tools like ssh-keygen on Linux and OS X or PuTTYgen on Windows. For details, see `Create and use an SSH public-private key pair for Linux VMs in Azure <https://azure.microsoft.com/documentation/articles/virtual-machines-linux-use-ssh-key/>`_.
 
 
 Part 2 – “Disks” in Create a Virtual Machine
