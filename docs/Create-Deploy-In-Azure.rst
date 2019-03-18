@@ -69,7 +69,7 @@ Part 3 – “Networking”  in Create a Vitual Machine
 
 **In Public IP**, communicate with Virtual Machine from outside the Virtual Network.
 
-**In Configure network security group**, the most important configuration is here. Here is the TCP and UDP port, inbound and outbound permissions are configured. If you change port setting in Ant Media Server, you need to change “Configure network security group”. Ant Media Server default port value is here (link)
+**In Configure network security group**, the most important configuration is here. Here is the TCP and UDP port, inbound and outbound permissions are configured. If you change port setting in Ant Media Server, you need to change “Configure network security group”. Ant Media Server default port values listed in below.
 
 .. warning::
 **The following ports to the Inbound list in Ant Media Server:**
@@ -103,7 +103,7 @@ Part 6 – “Tags” in Create Virtual Machine
 .. figure:: https://antmedia.io/wp-content/uploads/2019/03/tags-in-azure-marketplace.jpg
    :alt: Tags Config section in Azure Marketplace Virtual Machine
 
-Tags are name/value pairs that enable you to categorize resources and view consolidated billing by applying the same tag to multiple resources and resource groups
+Tags are name/value pairs that enable you to categorize resources and view consolidated billing by applying the same tag to multiple resources and resource groups.
 
 Part 7 – “Review + Create” in Create Virtual Machine
 ^^^^^^^^^^^^^^^^^^^^^
@@ -111,4 +111,4 @@ Part 7 – “Review + Create” in Create Virtual Machine
    :alt: Review + Create section in Azure Marketplace Virtual Machine
 
 Here you will see the settings you have made in other sections.
-After checking all the settings we can create the virtual machine.
+After checking all the settings you can create the virtual machine.
