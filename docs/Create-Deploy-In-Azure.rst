@@ -23,14 +23,14 @@ Community Edition and Enterprise Edition comparison chart is `here <https://antm
 
 Step 2: Customize Virtual Machine
 --------------------------------
-Part 1 – “Basics” in Create a Vitual Machine
+Part 1 – “Basics” in Create a Virtual Machine
 ^^^^^^^^^^^^^^^^^^^^^
 .. figure:: https://antmedia.io/wp-content/uploads/2019/03/basics-in-azure-marketplace.jpg
    :alt: Basics section in Azure Marketplace Virtual Machine
 
 **In Subscription**, Azure default payment method is Pay-As-You-Go. More details for see this `link <https://azure.microsoft.com/en-us/offers/ms-azr-0003p>`_.
 
-**In Resource group**, specify the resource group. To select an existing resource group, click Use existing, and then click the arrow in the list box to reveal existing resource groups. To create a new resource group, click Create new, and then type a name for it in the list box. For details, see Manage resource groups.  
+**In Resource group**, specify the resource group. To select an existing resource group, click Use existing, and then click the arrow in the list box to reveal existing resource groups. To create a new resource group, click Create new, and then type a name for it in the list box. For details, see `Manage resource groups <https://docs.microsoft.com/tr-tr/azure/azure-resource-manager/manage-resources-portal#manage-resource-groups>`_.
 
 **In Virtual machine name**, enter a name for your virtual machine. ("name must be 1-64 characters long and it cannot contain non-ASCII and special characters.") 
 
@@ -57,7 +57,7 @@ Standard SSD Disks are a cost effective storage option optimized for workloads t
 Use Standard HDD disks for Dev/Test scenarios and less critical workloads at lowest cost.
 
 .. tip::
-We recommend Premium SSD for high I/O.
+	We recommend Premium SSD for high I/O.
 
 Part 3 – “Networking”  in Create a Vitual Machine
 ^^^^^^^^^^^^^^^^^^^^^ 
@@ -74,13 +74,13 @@ Part 3 – “Networking”  in Create a Vitual Machine
 **In Configure network security group**, the most important configuration is here. Here is the TCP and UDP port, inbound and outbound permissions are configured. If you change port setting in Ant Media Server, you need to change “Configure network security group”. Ant Media Server default port values listed in below.
 
 .. warning::
-**The following ports to the Inbound list in Ant Media Server:**
+	**The following ports to the Inbound list in Ant Media Server:**
 
-* TCP:1935 (RTMP)
-* TCP:5080 (HTTP)
-* TCP:5443 (HTTPS)
-* TCP:5554 (RTSP)
-* UDP:5000-65000 (WebRTC and RTSP)
+	* TCP:1935 (RTMP)
+	* TCP:5080 (HTTP)
+	* TCP:5443 (HTTPS)
+	* TCP:5554 (RTSP)
+	* UDP:5000-65000 (WebRTC and RTSP)
 
 Part 4 – “Management” in Create Virtual Machine
 ^^^^^^^^^^^^^^^^^^^^^
