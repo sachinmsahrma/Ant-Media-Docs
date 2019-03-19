@@ -18,16 +18,16 @@ Directory Structure
 ::
 
    /home/antmedia/test
-|-- TestScriptAndTools-master   (this directory is downloaded from hithub)
-|   |-- Media
-|   |   '-- Test_600kbps.mp4
-|   '-- Tools
-|       |-- webrtctest
-|       |   |-- run.sh
-|       |   |-- lib
-|       |   '-- webrtctest.jar
-|       '-- loadtester-0.0.1-SNAPSHOT-spring-boot.jar
-|
-|
-'-- results      (created after first test)
-    '-- YYYY-MM-DD_hh:mm:ss
+   |-- TestScriptAndTools-master   (this directory is downloaded from hithub)
+   |   |-- Media
+   |   |   '-- Test_600kbps.mp4
+   |   '-- Tools
+   |       |-- webrtctest
+   |       |   |-- run.sh
+   |       |   |-- lib
+   |       |   '-- webrtctest.jar
+   |         '-- loadtester-0.0.1-SNAPSHOT-spring-boot.jar
+   |
+   |
+   '-- results      (created after first test)
+       '-- YYYY-MM-DD_hh:mm:ss
