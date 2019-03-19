@@ -1,7 +1,7 @@
 Test Plans
 ==========
 
-We have 5 different load test plans(prepared with JMeter) for different aims.
+We have 5 different load test plans for different aims.
 
 HLS Player Load Test 
 --------------------
@@ -10,14 +10,14 @@ HLS Player Load Test
   
 *scenario:* We publish a stream with RTMP and connect increasing numbers of HLS players to the stream. 
   
-*measurements:* By using REST api we get CPU and memory usage. With JMeter, we measure the time to get one ts file. 
+*measurements:* By using REST api we get CPU and memory usage. We get speed from ffmpeg.  
   
-*expectations:* one ts download time is to be the duration of ts. (for Test_600kbps.mp4 ts durations are 2 sec)
+*expectations:* speed >= 1x results
 
 *results:* As a result, we have 3 plots: 
-  - CPU usage vs Players count
-  - Memory usage vs Players count 
-  - Time to get one ts vs Players count
+  - CPU usage vs time 
+  - Publisher/Players count vs time
+  - Memory usage vs time
   
 RTMP Player Load Test 
 ---------------------
@@ -25,14 +25,14 @@ RTMP Player Load Test
 
 *scenario:* We publish a stream with RTMP and connect increasing numbers of RTMP players to the stream. 
 
-*measurements:* By using REST api we get CPU and memory usage. With RTMPClient tool, we measure latency which is the time difference between the total time to collect 25 frames and DTS/display time) of the 25th frame. 
+*measurements:* By using REST api we get CPU and memory usage. We get speed from ffmpeg.  
 
-*expectations:* latency is to be zero. 
+*expectations:* speed >= 1x results
 
 *results:* As a result, we have 3 plots: 
-- CPU usage vs Players count 
-- Memory usage vs Players count 
-- Latency vs Players count
+  - CPU usage vs time 
+  - Publisher/Players count vs time
+  - Memory usage vs time 
 
 WebRTC Player Load Test 
 -----------------------
@@ -42,9 +42,13 @@ WebRTC Player Load Test
 
 *measurements:* By using REST api we get CPU usage, memory usage.
 
-*results:* As a result, we have 4 plots:
-- CPU usage vs Players count
-- Memory usage vs Players count 
+*results:* As a result, we have 6 plots:
+  - CPU usage vs time 
+  - Publisher/Players count vs time
+  - Memory usage vs time
+  - Measured & Send bitrate vs time 
+  - Video Send Period vs time
+  - Audio Send Period vs time
 
 RTMP Publisher Load Test 
 ------------------------
@@ -56,9 +60,10 @@ RTMP Publisher Load Test
 
 *expectations:* If there is no encoding CPU usage is to be very low compared to the existence of encoding.
 
-*results:* As a result, we have 2 plots: 
-- CPU usage vs Publisher count 
-- Memory usage vs Publisher count
+*results:* As a result, we have 3 plots: 
+  - CPU usage vs time 
+  - Publisher/Players count vs time
+  - Memory usage vs time 
 
 WebRTC Publisher Load Test
 --------------------------
@@ -71,5 +76,6 @@ WebRTC Publisher Load Test
 *expectations:* If there is no  encoding CPU usage is to be very low compared to the existence of encoding. 
 
 *results:* As a result, we have 3 plots: 
-- CPU usage vs Publisher count 
-- Memory usage vs Publisher count
+  - CPU usage vs time 
+  - Publisher/Players count vs time
+  - Memory usage vs time 
