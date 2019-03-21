@@ -10,7 +10,9 @@ Installed Softwares
 ~~~~~~~~~~~~~~~~~~~
 - **Java:** Used by WebRTCTest Tool and test web application.
 - **FFmpeg:** Used for RTMP publishing and, RTMP and HLS playing. 
-- **Ant Media Tools:** WebRTCTest (used for both publishing and playing) and Test web application (used for managing tests). 
+- **Ant Media Tools:** 
+  -  WebRTCTest (used for both publishing and playing with WebRTC). 
+  -  Test web application (used for managing tests). 
 
 Directory Structure
 ~~~~~~~~~~~~~~~~~~~
@@ -18,16 +20,14 @@ Directory Structure
 ::
 
    /home/antmedia/test
-   |-- TestScriptAndTools-master   (this directory is downloaded from hithub)
-   |   |-- Media
-   |   |   '-- Test_600kbps.mp4
-   |   '-- Tools
-   |       |-- webrtctest
-   |       |   |-- run.sh
-   |       |   |-- lib
-   |       |   '-- webrtctest.jar
-   |         '-- loadtester-0.0.1-SNAPSHOT-spring-boot.jar
+   |-- webrtctest
+   |   |-- run.sh
+   |   |-- lib
+   |   '-- webrtctest.jar
    |
+   |-- loadtester.jar
+   |
+   |-- Test.mp4
    |
    '-- results      (created after first test)
        '-- YYYY-MM-DD_hh:mm:ss
