@@ -11,8 +11,9 @@ Installed Softwares
 - **Java:** Used by WebRTCTest Tool and test web application.
 - **FFmpeg:** Used for RTMP publishing and, RTMP and HLS playing. 
 - **Ant Media Tools:** 
-  -  WebRTCTest (used for both publishing and playing with WebRTC). 
-  -  Test web application (used for managing tests). 
+
+  -  **WebRTCTest** used for both publishing and playing with WebRTC. 
+  -  **Test web application** used for managing tests. 
 
 Directory Structure
 ~~~~~~~~~~~~~~~~~~~
