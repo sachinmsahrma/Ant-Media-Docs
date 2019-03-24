@@ -70,16 +70,6 @@ To play a stream with name <stream_name> from Ant Media Server, you can play the
 
 HLS
 ===
-Playing
--------
-To play a stream with name <stream_name> from Ant Media Server, you can open the following URL from your browser.
-
-``<AMS_URL>:<App_Name>/play.html?name=<stream_name>&auto=<true|false>``
-
-Actual streaming media URL is
-
-``<AMS_URL>:<App_Name>/streams/test.m3u8``
-
 .. include:: Play-Live-and-VoD-Streams-and-Previews.rst
 
 Low Latency WebRTC Live Streaming
