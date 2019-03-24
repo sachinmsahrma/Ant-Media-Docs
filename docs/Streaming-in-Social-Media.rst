@@ -33,7 +33,7 @@ Once Facebook authorization is complete, your facebook account fan pages and pro
    
 After the select page, it wil appear in Application / Settings / Social Streaming section
    
-.. tip::
+.. warning::
 	Note: In Authentication code page have a specific timeout time. Please perform this operation without delay.
 	
 Part 2 – Add Youtube Account in Ant Media Server
@@ -54,8 +54,9 @@ Once Youtube authorization is complete, your Youtube account will come up in Set
    
    After the authorization, it wil appear in Application / Settings / Social Streaming section
 
-.. tip::
+.. warning::
 	Note: In Authentication code page have a specific timeout time. Please perform this operation without delay.
+	
 	Note2: Your Live Streaming account must be verified. Account verification simple gif is here: https://antmedia.io/youtube_verification_ant_media_server.gif
 	
 Part 3 – Add Periscope Account in Ant Media Server
@@ -70,7 +71,7 @@ When you clicking Add Periscope icon, you will face in Authentication page. Auth
    
    After the authorization, it wil appear in Application / Settings / Social Streaming section
    
-.. tip::
+.. warning::
 	Note: In Authentication code page have a specific timeout time. Please perform this operation without delay.
 	
 Step 3: Live Streaming in Social Media
