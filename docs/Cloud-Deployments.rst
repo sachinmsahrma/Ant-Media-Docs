@@ -9,3 +9,8 @@ AMS on Azure Deployment
 AMS Cluster On AWS
 ==================
 .. include:: AMS-Cluster-On-AWS.rst
+
+AMS Cluster On Azure
+=====================
+
+.. include:: Clustering-with-Azure.rst
