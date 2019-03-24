@@ -36,7 +36,7 @@ After the select page, it wil appear in Application / Settings / Social Streamin
 .. tip::
 	Note: In Authentication code page have a specific timeout time. Please perform this operation without delay.
 	
-Part 2 – Add Youtube Account & Page in Ant Media Server
+Part 2 – Add Youtube Account in Ant Media Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: https://antmedia.io/wp-content/uploads/2019/03/youtube-add-account.png
    :alt: Click Add Youtube in Ant Media Server
@@ -46,8 +46,6 @@ When you clicking Add Youtube icon, you will face in Authentication page. Authen
 .. figure:: https://antmedia.io/wp-content/uploads/2019/03/youtube-connect-a-device.png
    :alt: Youtube Add Account Ant Media Server
    
-.. tip::
-	Note: In Authentication code page have a specific timeout time.  
    
 Once Youtube authorization is complete, your Youtube account will come up in Setting Page.
 
@@ -57,4 +55,39 @@ Once Youtube authorization is complete, your Youtube account will come up in Set
    After the authorization, it wil appear in Application / Settings / Social Streaming section
 
 .. tip::
-	Note: Your Live Streaming account must be verified. Account verification simple gif is here: https://antmedia.io/youtube_verification_ant_media_server.gif
+	Note: In Authentication code page have a specific timeout time. Please perform this operation without delay.
+	Note2: Your Live Streaming account must be verified. Account verification simple gif is here: https://antmedia.io/youtube_verification_ant_media_server.gif
+	
+Part 3 – Add Periscope Account in Ant Media Server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. figure:: https://antmedia.io/wp-content/uploads/2019/03/periscope-add-account.png
+   :alt: Click Add Periscope in Ant Media Server
+   
+When you clicking Add Periscope icon, you will face in Authentication page. Authentication page opens, you should click http://pscp.tv/auth link and Copy Authentication code and enter it to Periscope Page.
+   
+.. figure:: https://antmedia.io/wp-content/uploads/2019/03/periscope-authentication-successful.png
+   :alt: Periscope Add Account Ant Media Server
+   
+   After the authorization, it wil appear in Application / Settings / Social Streaming section
+   
+.. tip::
+	Note: In Authentication code page have a specific timeout time. Please perform this operation without delay.
+	
+Step 3: Live Streaming in Social Media
+----------------------------------------
+.. figure:: https://antmedia.io/wp-content/uploads/2019/03/social-media-streaming-ant-media-server.png
+   :alt: Dashboard / LiveApp / Setting Section
+   
+All of Social Media Authentications is completely you will see your Pages name written in Setting / Social Streaming section.
+   
+.. figure:: https://antmedia.io/wp-content/uploads/2019/03/new-live-streaming-in-ant-media-server.png
+   :alt: New Live Streaming in Application Dashboard
+
+You can add your Social Accounts in New Live Streaming section as above.
+
+.. tip::
+	We prepare to Youtube Video in this case. So, you can review our Youtube Tutorial Video in here https://www.youtube.com/watch?v=drXSywpuBtQ 
+   
+   
+
+
