@@ -13,6 +13,9 @@ To stream your camera with name <stream_name> to the Ant Media Server, you can o
 
 ``<AMS_URL>:WebRTCAppEE/index.html?name=<stream_name>``
 
+.. figure:: img/webrtc_publish.png
+   :alt: WebRTC Publish
+
 Playing
 -------
 To play a stream with name <stream_name> from Ant Media Server, you can open the following URL from your browser then click play button.
@@ -23,17 +26,26 @@ If you want to start playing when stream is available, you can open following UR
 
 ``<AMS_URL>:WebRTCAppEE/play_embed.html?name=<stream_name>``
 
+.. figure:: img/webrtc_play.png
+   :alt: WebRTC Play
+
 Peer-to-peer
 ------------
 If you want to use Ant Media Server for a signalling server you open following URL.
 
 ``<AMS_URL>:WebRTCAppEE/peer.html?name=<stream_name>``
 
+.. figure:: img/webrtc_peer.png
+   :alt: WebRTC Peer
+
 Conference
 ----------
 If you want to use Ant Media Server for a multiuser conference, you open following URL.
 
 ``<AMS_URL>:WebRTCAppEE/conference.html``
+
+.. figure:: img/webrtc_conference.png
+   :alt: WebRTC Conference
 
 WebRTC Screen Sharing
 ---------------------
