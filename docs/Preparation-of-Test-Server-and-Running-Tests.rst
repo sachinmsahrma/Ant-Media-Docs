@@ -31,7 +31,7 @@ Step 4. Run Dockerfile
 Run your container with the following command:
 ::
 
-$ sudo docker run -w "/home/antmedia/test" --name amstest -p 8090:8090 antmedia/test java -jar loadtester.jar
+$ sudo docker run -w "/usr/local/test" --name amstest -p 8090:8090 antmedia/test java -jar loadtester.jar
 
 Step 5. Connect to Ant Media Load Test Server within Docker
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
