@@ -15,6 +15,8 @@ This guide explains how to control Security on Ant Media Server. Briefly, our se
 
 4- CORS Filter in Streaming Sources.
 
+5- Hash Based Token in Streaming Sources
+
 1- IP Filter in REST API
 --------------------------
 .. tip::
@@ -61,11 +63,7 @@ rtmp://[IP_Address]/<Application_Name>/streamID?token=tokenId
 
 Live Stream / VOD URL usage:
 
-http://[IP_Address]/<Application_Name>/streams/250116815996644357614115.mp4?token=tokenId
-
-Live Stream / VOD URL usage:
-
-http://[IP_Address]/<Application_Name>/streams/250116815996644357614115.mp4?token=tokenId
+http://[IP_Address]/<Application_Name>/streams/streamID.mp4?token=tokenId
 
 WebRTC usage:
 
@@ -114,3 +112,102 @@ If you remove CORS Filters in root, you should remove CORS Filters section in Se
    
 .. warning::
 	If you remove CORS Filter, everyone can use your resources (m3u8, mp4 or etc) files and URL's
+	
+5- Hash Based Token in Streaming Sources
+-----------------------------------------
+
+.. tip::
+	Hash Based Token feature is available for later versions of the 1.6.2+ version.
+	
+Firstly, the settings should be enabled from the settings file of the application.
+
+.. code-block:: java
+
+	settings.hashControlPublishEnabled=false
+	settings.hashControlPlayEnabled=false
+	tokenHashSecret=
+	
+Set true "settings.hashControlPublishEnabled" to enable secret based hash control for publishing operations, and "settings.hashControlPlayEnabled=" for playing operations.
+
+.. tip::
+	Also, do not forget to define a secret key for generating a hash value.
+	
+Publishing Scenario
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Step 1. Generate a Hash
+""""""""""""""""""""""""
+
+You need to generate a hash value using the formula sha256(STREAM_ID + ROLE + SECRET) for your application and send to your clients. The values used for hash generation are:
+
+.. code-block:: java
+
+	STREAM_ID: The id of stream, generated in Ant Media Server.
+	ROLE: It is either "play or "publish"
+	SECRET: Shared secret key (should be defined in the setting file)
+	
+Step 2. Request with Hash
+"""""""""""""""""""""""""""
+The system controls hash validity during publishing or playing.
+
+RTMP Publishing: You need to add a hash parameter to RTMP URL before publishing. Sample URL:
+
+rtmp://[IP_Address]/<Application_Name>/<Stream_Id>?token=hash
+
+WebRTC Publishing: Hash parameter should be inserted to publish WebSocket message.
+
+{
+
+    command : "publish",
+	
+    streamId : "stream1",
+	
+    token : "hash",
+	
+}
+
+For details about WebRTC WebSocket messaging please visit `wiki page <https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details>`_.
+
+B) Playing Scenario
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Step 1. Generate a Hash
+"""""""""""""""""""""""""
+
+You need to generate a hash value using the formula sha256(STREAM_ID + ROLE + SECRET) for your application and send to your clients. The values used for hash generation are:
+
+.. code-block:: java
+
+	STREAM_ID: The id of stream, generated in Ant Media Server.
+	ROLE: It is either "play or "publish"
+	SECRET: Shared secret key (should be defined in the setting file)
+
+Step 2. Request with Hash
+"""""""""""""""""""""""""""
+
+Live Stream/VoD Playing: Same as publishing, the hash parameter is added to URL. Sample URL:
+
+http://[IP_Address]/<Application_Name>/streams/<Stream_Id_or_Source_Name>?token=hash
+
+WebRTC Playing: Again the hash parameter should be inserted to play WebSocket message.
+
+{
+
+    command : "play",
+
+    streamId : "stream1",
+	
+    token : "hash",
+	
+}
+
+Please have a look at the principles described in the wiki page.
+
+Evaluation of the Hash
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If related settings are enabled, Ant Media Server first generates hash values based on the formula sha256(STREAM_ID + ROLE + SECRET) using streamId, role parameters and secret string which is defined in the settings file. 
+
+Then compare this generated hash value with clients hash value during authentication.
+
+Once the hash is successfully validated by Ant Media Server, client is granted either to publish or play according to application setting and user request.
