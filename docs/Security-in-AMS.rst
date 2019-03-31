@@ -15,8 +15,6 @@ This guide explains how to control Security on Ant Media Server. Briefly, our se
 
 4- CORS Filter in Streaming Sources.
 
-5- Hash Based Token
-
 1- IP Filter in REST API
 --------------------------
 .. tip::
@@ -98,13 +96,21 @@ WebSocket: ws://SERVER_NAME:5080/WebRTCAppEE/websocket
 	
 }
 
+Please check this `blog <https://antmedia.io/secure-video-streaming/>`_ for more detailed information. 
 
+4- CORS Filter in Streaming Sources
+-------------------------------------
+CORS(Cross-Origin Resource Sharing) Filter is active by default. 
 
+If you remove CORS Filters in Applications(LiveApp or etc.), you should remove CORS Filters section in ServerFolder / webapps / Application(LiveApp or etc.) / WEB-INF / web.xml
 
-
-
-
-
-
-
-
+.. figure:: https://antmedia.io/wp-content/uploads/2019/03/CORS-Filter-in-Application.png
+   :alt: CORS Filter Setting in Applications
+   
+If you remove CORS Filters in root, you should remove CORS Filters section in ServerFolder / webapps / root / WEB-INF / web.xml
+   
+.. figure:: https://antmedia.io/wp-content/uploads/2019/03/CORS-Filter-in-root.png
+   :alt: CORS Filter Setting in root   
+   
+.. warning::
+	If you remove CORS Filter, everyone can use your resources (m3u8, mp4 or etc) files and URL's
