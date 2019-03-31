@@ -31,6 +31,23 @@ If you want some IP addresses to be able to access REST APIs, you should add IP'
 
 .. warning::
 	If you delete 127.0.0.1, localhost web panel will no longer work. We have added 127.0.0.1 feature to people who have the same network. You can delete 127.0.0.1 if you do not want people with the same network to access REST APIs.
+	
+If you remove REST Filter in AMS, you should delete below codes in SERVER_FOLDER/webapp/Application(LiveApp or etc.)/WEB-INF/web.xml
+
+.. code-block:: java
+
+	<filter>
+    	<filter-name>AuthenticationFilter</filter-name>
+   		<filter-class>io.antmedia.console.rest.AuthenticationFilter</filter-class>
+  	</filter>
+  	
+  	<filter-mapping>
+  		<filter-name>AuthenticationFilter</filter-name>
+		<url-pattern>/rest/*</url-pattern>
+  	</filter-mapping>
+	
+.. warning::
+	If you delete AuthenticationFilter code block in Application, Everyone access your REST API.
 
 2- Accept Undefined Streams
 -----------------------------
@@ -39,7 +56,7 @@ If you want some IP addresses to be able to access REST APIs, you should add IP'
 	
 This setting shortly; Checking Live Stream is registered in Ant Media Server.
 
-For example: If Stream Publishing enabled Allow All option, everyone can send Live Streaming(RTMP,WebRTC or etc) in Ant Media Server. If Stream Publishing enabled Allow Only In Database option, only registered streaming accept Ant Media Server. Registered mean, Dashboard/App/Live Streams/New Live Streams. 
+**For example:** If Stream Publishing enabled Allow All option, everyone can send Live Streaming(RTMP,WebRTC or etc) in Ant Media Server. If Stream Publishing enabled Allow Only In Database option, only registered streaming accept Ant Media Server. Registered mean, Dashboard/App/Live Streams/New Live Streams. 
  
 You can find in more detail in here http://docs.antmedia.io/en/latest/Configurations.html#settings-file-under-applications settings.acceptOnlyStreamsInDataStore value
 
@@ -57,42 +74,47 @@ By enabling this option, one time tokens are required for publishing and playing
 
 If One-Time Token control option is active, then all publish and play requests should be sent with a token parameter.
 
-RTMP URL usage:
+**RTMP URL usage:**
 
-rtmp://[IP_Address]/<Application_Name>/streamID?token=tokenId
+.. code-block:: java
+
+	rtmp://[IP_Address]/<Application_Name>/streamID?token=tokenId
 
 Live Stream / VOD URL usage:
 
-http://[IP_Address]/<Application_Name>/streams/streamID.mp4?token=tokenId
+.. code-block:: java
 
-WebRTC usage:
+	http://[IP_Address]/<Application_Name>/streams/streamID.mp4?token=tokenId
 
--Playing usage: Again the token parameter should be inserted to play WebSocket message. Also please have a look at the principles described in the `WebRTC playing wiki page <https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details#playing-webrtc-stream>`_. 
+**WebRTC usage:**
 
-WebSocket: ws://SERVER_NAME:5080/WebRTCAppEE/websocket
+**-Playing usage:** Again the token parameter should be inserted to play WebSocket message. Also please have a look at the principles described in the `WebRTC playing wiki page <https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details#playing-webrtc-stream>`_. 
 
-{
+.. code-block:: java
+
+	WebSocket: ws://SERVER_NAME:5080/WebRTCAppEE/websocket
+
+.. code-block:: java
+
+	{
     command : "play",
-
     streamId : "stream1",
-
     token : "tokenId",
+	}
 
-}
+**-Publishing usage:** Again the token parameter should be inserted to play WebSocket message. Also please have a look at the principles described in the `WebRTC publishing wiki page <https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details#publishing-webrtc-stream>`_.
 
--Publishing usage: Again the token parameter should be inserted to play WebSocket message. Also please have a look at the principles described in the `WebRTC publishing wiki page <https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details#publishing-webrtc-stream>`_.
-
-WebSocket: ws://SERVER_NAME:5080/WebRTCAppEE/websocket
-
-{
-
-    command : "publish",
+.. code-block:: java
 	
-    streamId : "stream1",
-	
-    token : "tokenId",
-	
-}
+	WebSocket: ws://SERVER_NAME:5080/WebRTCAppEE/websocket
+
+.. code-block:: java
+
+	{
+		command : "publish",
+		streamId : "stream1",
+		token : "tokenId",
+	}
 
 Please check this `blog <https://antmedia.io/secure-video-streaming/>`_ for more detailed information. 
 
@@ -150,23 +172,21 @@ Step 2. Request with Hash
 """""""""""""""""""""""""""
 The system controls hash validity during publishing or playing.
 
-RTMP Publishing: You need to add a hash parameter to RTMP URL before publishing. Sample URL:
+**RTMP Publishing:** You need to add a hash parameter to RTMP URL before publishing. Sample URL:
 
-rtmp://[IP_Address]/<Application_Name>/<Stream_Id>?token=hash
+.. code-block:: java
 
-WebRTC Publishing: Hash parameter should be inserted to publish WebSocket message.
+	rtmp://[IP_Address]/<Application_Name>/<Stream_Id>?token=hash
 
-{
+**WebRTC Publishing:** Hash parameter should be inserted to publish WebSocket message.
 
-    command : "publish",
-	
-    streamId : "stream1",
-	
-    token : "hash",
-	
-}
+.. code-block:: java
 
-For details about WebRTC WebSocket messaging please visit `wiki page <https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details>`_.
+	{
+		command : "publish",
+		streamId : "stream1",
+		token : "hash",
+	}
 
 B) Playing Scenario
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -185,23 +205,24 @@ You need to generate a hash value using the formula sha256(STREAM_ID + ROLE + SE
 Step 2. Request with Hash
 """""""""""""""""""""""""""
 
-Live Stream/VoD Playing: Same as publishing, the hash parameter is added to URL. Sample URL:
+**Live Stream/VoD Playing:** Same as publishing, the hash parameter is added to URL. Sample URL:
 
-http://[IP_Address]/<Application_Name>/streams/<Stream_Id_or_Source_Name>?token=hash
+.. code-block:: java
 
-WebRTC Playing: Again the hash parameter should be inserted to play WebSocket message.
+	http://[IP_Address]/<Application_Name>/streams/<Stream_Id_or_Source_Name>?token=hash
 
-{
+**WebRTC Playing:** Again the hash parameter should be inserted to play WebSocket message.
 
-    command : "play",
+.. code-block:: java
 
-    streamId : "stream1",
-	
-    token : "hash",
-	
-}
+	{
+		command : "play",
+		streamId : "stream1",
+		token : "hash",
+	}
 
-Please have a look at the principles described in the wiki page.
+.. tip::
+	Please have a look at the principles described in the `WebRTC WebSocket wiki page <https://github.com/ant-media/Ant-Media-Server/wiki/WebRTC-WebSocket-Messaging-Details>`_.
 
 Evaluation of the Hash
 ^^^^^^^^^^^^^^^^^^^^^^^^^
