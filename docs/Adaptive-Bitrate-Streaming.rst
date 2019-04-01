@@ -2,7 +2,7 @@
 Adaptive Bitrate Streaming
 ##########################
 
-Adaptive Bitrate Streaming is an attractive feature of Ant Media Server. Thanks to this feature, broadcasts also continue uninterruptedly in low quality connections. For more detail about ABR you can check .. this post: https://antmedia.io/adaptive-streaming-is-supported-for-live-streams-on-the-fly/
+Adaptive Bitrate Streaming is an attractive feature of Ant Media Server. Thanks to this feature, broadcasts also continue uninterruptedly in low quality connections. For more detail about ABR you can check ..  _this post: https://antmedia.io/adaptive-streaming-is-supported-for-live-streams-on-the-fly/
 
 To enable ABR feature you must add Addaptive Settings from Management Panel.
 
