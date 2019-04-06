@@ -9,7 +9,6 @@ User Guide
   Getting-Started.rst
   Streaming-Protocols.rst
   Connecting-Stream-Sources.rst
-  Restreaming-External-Sources.rst
   Streaming-in-Social-Media.rst
   Scaling-and-Load-Balancing.rst
   Cloud-Deployments.rst
