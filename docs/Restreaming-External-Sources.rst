@@ -1,4 +1,4 @@
-Ant Media Server operates with different streaming flows. As well as accepting and creating streaming media, it also has the capability of the pull live streams from external sources. Such as; live TV streams, IP camera streams or other forms of live streams(RTSP, HLS, TS, FLV etc.).  Pulling IP Camera streams is explained `here <Pull-IP-Camera-Streams.rst>`_. This was the first part of this concept. Now Ant Media Server pulls not only IP Camera streams but also other forms of live streams. We will first show how to pull live streams with Web Interface and then we will give technical details for developers.
+Ant Media Server operates with different streaming flows. As well as accepting and creating streaming media, it also has the capability of the pull live streams from external sources. Such as; live TV streams, IP camera streams or other forms of live streams(RTSP, HLS, TS, FLV etc.).  We will first show how to pull live streams with Web Interface and then we will give technical details for developers.
 
 Pull Live Streams with Web Interface
 ------------------------------------
