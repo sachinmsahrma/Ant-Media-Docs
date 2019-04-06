@@ -5,10 +5,11 @@ User Guide
 .. toctree::
   :maxdepth: 2
   :caption: USER GUIDE
-  
+
   Getting-Started.rst
   Streaming-Protocols.rst
   Connecting-Stream-Sources.rst
+  Restreaming-External-Sources.rst
   Streaming-in-Social-Media.rst
   Scaling-and-Load-Balancing.rst
   Cloud-Deployments.rst
@@ -26,7 +27,7 @@ User Guide
   Security.rst
   Cloud-Deployments.rst
   Frequently-Asked-Questions.rst
-  
+
 Developers Guide
 ================
 .. toctree::
@@ -43,7 +44,7 @@ Developers Guide
   Rest-Api.rst
   Load-Balancer-with-HAProxy-SSL-Termination.rst
   Building-and-Running-Docker-Container-for-Ant-Media-Server.rst
-  
+
 Testers Guide
 ================
 .. toctree::
@@ -54,4 +55,3 @@ Testers Guide
   Preparation-of-Test-Server-and-Running-Tests.rst
   Test-Plans.rst
   Inside-of-The-Box.rst
-  
