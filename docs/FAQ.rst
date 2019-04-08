@@ -9,17 +9,33 @@ How to reset Ant Media Server admin password?
 
 Go to the installation directory of Ant Media Server.
 
-cd /usr/local/antmedia
+.. code-block:: java
+
+	cd /usr/local/antmedia
 
 **Step-2:**
 
 Remove "server.db" file.
 
-sudo rm server.db
+.. code-block:: java
+
+	sudo rm server.db
 
 Step.3: Restart Ant Media Server.
 
-sudo service antmedia restart
+.. code-block:: java
+
+	sudo service antmedia restart
+
+ICE failed, add a STUN server and see about:webrtc for more details
+--------------------------------------------------------------------- 
+
+if you get this error, you should check your UDP (5000-65535) Ports are open.
+
+I enabled Object Detection, but doesn't work
+-----------------------------------------------
+
+You should add Adaptive Streaming in Application/Settings.
 
 How to Reduce Latency in RTMP to HLS?
 ---------------------------------------
@@ -60,21 +76,25 @@ Enabling SSL in Linux(Ubuntu)
 Go to the folder where Ant-Media-Server is installed. Default directory is /usr/local/antmedia
 
 .. code-block:: java
+
 	cd /usr/local/antmedia
 	
 If there is a service that uses 80 port, you need to disable it. If your system has Apache Web Server, you need to disable it first such a command below
 
 .. code-block:: java
+
 	sudo service apache2 stop	
 	
 There should be a enable_ssl.sh file in the installation directory. Call the enable_ssl.sh with your domain name
 
 .. code-block:: java
+
 	sudo ./enable_ssl.sh example.com
 	
 v1.5+, enable_ssl.sh script supports external fullchain.pem and privkey.pem files. It's usage has been changed to
 
 .. code-block:: java
+
 	Usage:
 	sudo ./enable_ssl.sh -d {DOMAIN_NAME}
 	sudo ./enable_ssl.sh -f {FULL_CHAIN_FILE} -p {PRIVATE_KEY_FILE} -d {DOMAIN_NAME} 
@@ -82,6 +102,7 @@ v1.5+, enable_ssl.sh script supports external fullchain.pem and privkey.pem file
 If you disable any service that binds to 80 port such as Apache Web Server, enable it again
 
 .. code-block:: java
+
 	sudo service apache2 start
 	
 Make sure that your domain points to your server public IP address in the DNS records
@@ -89,6 +110,7 @@ Make sure that your domain points to your server public IP address in the DNS re
 If the above scripts returns successfully, SSL will be installed your server, you can use https through 5443. Like below
 
 .. code-block:: java
+
 	https://example.com:5443
 
 .. warning::
@@ -100,11 +122,13 @@ How to Remove Port Forwarding?
 Check that which port forwardings exist in your system with below command.
 
 .. code-block:: java
+
 	sudo iptables -t nat --line-numbers -L
 	
 The command above should give an output live below
 
 .. code-block:: java
+
 	Chain PREROUTING (policy ACCEPT)
 	num  target     prot opt source               destination         
 	1    REDIRECT   tcp  --  anywhere             anywhere             tcp dpt:https redir ports 5443
@@ -115,6 +139,7 @@ The command above should give an output live below
 Delete the rule by line number. For instance to delete the http -> 5080 forwarding, run the command below
 
 .. code-block:: java
+
 	iptables -t nat -D PREROUTING 2
 
 parameter 2 is the line number, if you want to delete https -> 5443, you should use 1 instead of 2
