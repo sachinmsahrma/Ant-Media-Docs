@@ -40,20 +40,6 @@ You should add Adaptive Streaming in Application/Settings.
 How to Reduce Latency in RTMP to HLS?
 ---------------------------------------
 
-In this article, we will explain how to reduce latency for RTMP to HLS. But firstly we will keep you inform some of terms Stream protocols like RTMP and HLS about the used technologies.
-
-What is RTMP (Real Time Messaging Protocol) ?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-RTMP means Real Time Messaging Protocol. RTMP is mostly depreciated for use as a viewer-facing video streaming protocol. However, RTMP is the most commonly used streaming protocol.
-
-What is HLS (HTTP Live Streaming) ?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The HLS(HTTP Live Streaming) protocol was developed by Apple. The HLS streaming protocol works by chopping MPEG-TS video content into short chunks. On slow network speed, HLS allows the player to use a lower quality video, thus reducing bandwidth usage. HLS videos can be made highly available by providing multiple servers for the same video, allowing the player to swap seamlessly if one of the servers fails.
-
-How to Reduce latency for RTMP -> HLS Streaming ?
-
 To reduce the HLS latency there are some parameters and it can be reduced to 8-10 secs for now.
 
 - One of the parameter is having HLS segment time lower value which is by default 2 sec in Ant Media Server and you can decrease this value to have lower latency but then players start to poll server more frequently and it can be waste of resource usage.
@@ -174,3 +160,92 @@ Which codecs are supported by AntMedia?
 -----------------------------------------
 
 In video H264 is supported, In audio, for WebRTC, opus is supported and for HLS, AAC is supported.
+
+Why are the WebRTC Bitrate limitations so low?
+-----------------------------------------------
+
+Let's remember the definition of WebRTC from its founders:
+
+.. tip::
+	"WebRTC is a free, open project that provides browsers and mobile applications with Real-Time Communications (RTC) capabilities via simple APIs. The WebRTC components have been optimized to best serve this purpose."
+
+As you may know, the main purpose of WebRTC is Real-Time Communication.
+
+Image quality is an opponent power against real-time (ultra-low latency) communication.
+
+So, there should be a break-even point for the balance of latency and image quality.
+
+The optimum video speed with the current processor and communication platforms is 2500 Kbps.
+
+There are some references to this issue:
+
+- A blog from WebRTC Expert Tashi Levent Levi:  https://bloggeek.me/webrtc-vs-zoom-video-quality/
+
+- A paper from academia: http://wimnet.ee.columbia.edu/wp-content/uploads/2017/10/WebRTC-Performance.pdf
+
+- Test results for the limits from webrtc-experiment.com 
+
+.. code-block:: java
+        
+	https://www.webrtc-experiment.com/webrtcpedia/
+    Maximum video bitrate on chrome is about 2Mb/s (i.e. 2000kbits/s).
+    Minimum video bitrate on chrome is .05Mb/s (i.e. 50kbits/s).
+    Starting video bitrate on chrome is .3Mb/s (i.e. 300kbits/s).
+
+As a result, everyone needs to measure the best performant configuration of their infrastructure by changing them step-by-step.
+
+Our suggestions are as follows:
+
+.. code-block:: java
+
+	- 20 for FPS is optimum; however, 10 and 15 should be examined.
+	- 720p is good enough for video quality, especially for mobile platforms.
+	- 1000 Kbps is optimum for 720p, 750 Kbps is also acceptable when FPS is 10.
+
+Pixelating of frames in WebRTC
+--------------------------------
+
+This can cause a lot of things. If the broadcast values(Frame drop or etc) and server values (CPU or Ram etc.) are healthy, 3 things that matter to us can be listed below.
+
+- Adaptive Streaming Setting. Here is default Setting in below.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: java
+
+	Resolution   Video Bitrate (Kbps)  Audio Bitrate (Kbps)
+	1080p              2000                       256
+	720p               1500                       128 
+	480p               1000                        75
+	360p                800                        64
+	240p                500                        32
+
+These values change some different cases. Because everyone's scenario is different, these values are not fixed.
+
+-WebRTC Framerate Setting
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Framerate is also a specific parameter. The framerate default parameter is 20. But as I said above, these values change your situation.
+
+-Server Location
+^^^^^^^^^^^^^^^^^^
+
+It is more stable to broadcast physically near servers.
+
+If broadcast quality problems occur, lower these values and select the server close to where you broadcast, I hope your quality problem will go away.
+
+Frame Freezing in WebRTC Streaming
+-------------------------------------
+
+Frame Freezing problem is caused by frame Drop. The frame Drop reasons are listed below.
+
+-Server Location
+^^^^^^^^^^^^^^^^^^
+
+It is more stable to broadcast physically near servers.
+
+-Server Network Capacity
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For Media Streaming, servers with high network capacity are required. If your server's network capacity is low, you may experience frame drops. Also, Frame Drops causes Frame Freezing.
+
+
