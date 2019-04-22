@@ -2,6 +2,48 @@
 Frequently Asked Questions
 ############################
 
+`How to reset admin password? <http://docs.antmedia.io/en/latest/FAQ.html#how-to-reset-ant-media-server-admin-password>`_
+---------------------------------------------------------------------------------------------------------------------------------
+
+`ICE failed, add a STUN server and see about:webrtc for more details <http://docs.antmedia.io/en/latest/FAQ.html#ice-failed-add-a-stun-server-and-see-about-webrtc-for-more-details>`_
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+`I enabled Object Detection, but doesn’t work <http://docs.antmedia.io/en/latest/FAQ.html#i-enabled-object-detection-but-doesn-t-work>`_
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+`How to Reduce Latency in RTMP to HLS? <http://docs.antmedia.io/en/latest/FAQ.html#how-to-reduce-latency-in-rtmp-to-hls>`_
+--------------------------------------------------------------------------------------------------------------------------------
+
+`How to enable SSL for Ant Media Server? <http://docs.antmedia.io/en/latest/FAQ.html#how-to-enable-ssl-for-ant-media-server>`_
+--------------------------------------------------------------------------------------------------------------------------------------
+
+`How to Remove Port Forwarding? <http://docs.antmedia.io/en/latest/FAQ.html#how-to-remove-port-forwarding>`_
+-----------------------------------------------------------------------------------------------------------------
+
+`How to fix issue “Make sure that your domain name was entered correctly and the DNS A AAAA record(s)”? <http://docs.antmedia.io/en/latest/FAQ.html#how-to-fix-issue-make-sure-that-your-domain-name-was-entered-correctly-and-the-dns-a-aaaa-record-s>`_
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+`How to fix “NotSupportedError” in publishing WebRTC stream in Ant Media Server ? <http://docs.antmedia.io/en/latest/FAQ.html#how-to-fix-notsupportederror-in-publishing-webrtc-stream-in-ant-media-server>`_
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+`WebRTC stream stops after a few seconds <http://docs.antmedia.io/en/latest/FAQ.html#webrtc-stream-stops-after-a-few-seconds>`_
+----------------------------------------------------------------------------------------------------------------------------------------
+
+`In IOS, Chrome and Firefox cannot open the camera <http://docs.antmedia.io/en/latest/FAQ.html#in-ios-chrome-and-firefox-cannot-open-the-camera>`_
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+`Which codecs are supported by AntMedia? <http://docs.antmedia.io/en/latest/FAQ.html#which-codecs-are-supported-by-antmedia>`_
+------------------------------------------------------------------------------------------------------------------------------------
+
+`Why are the WebRTC Bitrate limitations so low? <http://docs.antmedia.io/en/latest/FAQ.html#why-are-the-webrtc-bitrate-limitations-so-low>`_
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+`Pixelating of frames in WebRTC <http://docs.antmedia.io/en/latest/FAQ.html#pixelating-of-frames-in-webrtc>`_
+-----------------------------------------------------------------------------------------------------------------
+
+`Frame Freezing in WebRTC Streaming http://docs.antmedia.io/en/latest/FAQ.html#frame-freezing-in-webrtc-streaming>`_
+-----------------------------------------------------------------------------------------------------------------------
+
 How to reset Ant Media Server admin password?
 -----------------------------------------------
 
@@ -186,7 +228,7 @@ There are some references to this issue:
 - Test results for the limits from webrtc-experiment.com 
 
 .. code-block:: java
-        
+    
 	https://www.webrtc-experiment.com/webrtcpedia/
     Maximum video bitrate on chrome is about 2Mb/s (i.e. 2000kbits/s).
     Minimum video bitrate on chrome is .05Mb/s (i.e. 50kbits/s).
@@ -207,7 +249,7 @@ Pixelating of frames in WebRTC
 
 This can cause a lot of things. If the broadcast values(Frame drop or etc) and server values (CPU or Ram etc.) are healthy, 3 things that matter to us can be listed below.
 
-- Adaptive Streaming Setting. Here is default Setting in below.
+-Adaptive Streaming Setting. Here is default Setting in below.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: java
