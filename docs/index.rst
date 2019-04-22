@@ -12,6 +12,7 @@ User Guide
   Streaming-in-Social-Media.rst
   Scaling-and-Load-Balancing.rst
   Cloud-Deployments.rst
+  FAQ.rst
 
 ..  Getting-Started.rst
   Management-Console.rst
