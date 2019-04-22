@@ -41,7 +41,7 @@ Frequently Asked Questions
 `Pixelating of frames in WebRTC <http://docs.antmedia.io/en/latest/FAQ.html#pixelating-of-frames-in-webrtc>`_
 -----------------------------------------------------------------------------------------------------------------
 
-`Frame Freezing in WebRTC Streaming http://docs.antmedia.io/en/latest/FAQ.html#frame-freezing-in-webrtc-streaming>`_
+`Frame Freezing in WebRTC Streaming <http://docs.antmedia.io/en/latest/FAQ.html#frame-freezing-in-webrtc-streaming>`_
 -----------------------------------------------------------------------------------------------------------------------
 
 How to reset Ant Media Server admin password?
@@ -203,7 +203,7 @@ Which codecs are supported by AntMedia?
 
 In video H264 is supported, In audio, for WebRTC, opus is supported and for HLS, AAC is supported.
 
-Why are the WebRTC Bitrate limitations so low?
+How to improve WebRTC bit rate?
 -----------------------------------------------
 
 Let's remember the definition of WebRTC from its founders:
@@ -289,5 +289,101 @@ It is more stable to broadcast physically near servers.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For Media Streaming, servers with high network capacity are required. If your server's network capacity is low, you may experience frame drops. Also, Frame Drops causes Frame Freezing.
+
+How to Fix 403 Forbidden Error?
+-------------------------------------
+
+You can use IP Filtering for your Ant Media Server's RESTful API gate. 
+If it's ON and your IP is not listed on the enabled IPs List, you cannot access to RESTful API. If you delete 127.0.0.1, localhost web panel will no longer work. 
+Write access IP Address like: 127.0.0.1,192.168.1.1/24,34.22.16.222
+
+
+May I use Docker images to deploy Ant Media Server?
+-----------------------------------------------------
+
+Absolutely YES. Utilizing Docker images is a very common way of deploying Ant Media Server.
+
+Have the ultra low latency streams adaptive bit rates as well?
+------------------------------------------------------------------
+
+Definitely YES. Ant Media Server provides ultra-low latency and adaptive bit rate at the same time.
+
+How many different bit rates possible with Ant Media Server Enterprise Edition?
+----------------------------------------------------------------------------------
+
+There is virtually no limit. AMSEE typically run 4-5 different bitrates with the option to go lower.
+
+.. code-block:: java
+
+	The recommended default resolutions are:
+
+	240p - 500 Kbps
+	360p - 800 Kbps
+	480p - 1000 Kbps
+	720p - 1500 Kbps
+	1080p - 2000 Kbps
+	
+What latencies can I achieve with Ant Media Server Enterprise Edition?
+-----------------------------------------------------------------------------
+
+Ant Media Server Enterprise Edition is capable of:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+0,5 seconds typical latency with WebRTC to WebRTC streaming path. (usually around 0,2 seconds)
+
+2-3 seconds typical latency with RTSP/RTMP to WebRTC streaming path.
+
+6-10 seconds typical latency with RTMP/WebRTC to HLS streaming path.
+
+What are the deployment options for Ant Media Server?
+---------------------------------------------------------
+
+There're 4 different methods to use Ant Media Server (AMS):
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you want to host AMS on your own server/cloud, you can buy Ant Media Server Enterprise Edition License: https://antmedia.io/#products
+
+If you don't want to concern on server/cloud stuff, you can buy small/medium/large server instances which have already installed AMS: https://antmedia.io/#products
+
+If you have an AWS account, you can use AMS and pay for Amazon: https://aws.amazon.com/marketplace/search/results?x=0&y=0&searchTerms=Ant+Media+Server&page=1&ref_=nav_search_box
+
+If you have an Azure account, you can use AMS and pay for Microsoft: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/antmedia.ant_media_server_enterprise
+
+How to set up an auto scaling cluster with Ant Media Server?
+----------------------------------------------------------------
+
+Main documentation of Ant Media Server is on http://docs.antmedia.io/en/latest/
+
+Scaling and Load Balancing http://docs.antmedia.io/en/latest/Scaling-and-Load-Balancing.html
+
+AMS Cluster On AWS http://docs.antmedia.io/en/latest/Cloud-Deployments.html#ams-cluster-on-aws
+
+AMS Cluster On Azure http://docs.antmedia.io/en/latest/Cloud-Deployments.html#ams-cluster-on-azure
+
+Documentation of AMS has improved and is still developing.
+
+Adaptive Bit Rate Mechanism on Ant Media Server
+----------------------------------------------------
+
+Actually, the bottleneck is the network throughput. So, Ant Media Server is always aware of the network speed, the end-user has on his side. Regardless of the resolution in the Adaptive settings, a bitrate selection is made either upward or downward, depending on the bit rate information and the instantaneous network speed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
