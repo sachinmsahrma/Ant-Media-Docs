@@ -3,7 +3,6 @@ Frequently Asked Questions
 ############################
 
 Here we have collected the most frequently asked questions
-------------------------------------------------------------
 
 - `How to reset admin password? <http://docs.antmedia.io/en/latest/FAQ.html#how-to-reset-ant-media-server-admin-password>`_
 
@@ -51,7 +50,7 @@ Here we have collected the most frequently asked questions
 
 
 How to reset Ant Media Server admin password?
-***********************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Step.1:**
 
@@ -76,17 +75,17 @@ Step.3: Restart Ant Media Server.
 	sudo service antmedia restart
 
 ICE failed, add a STUN server and see about:webrtc for more details
-***************************************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 if you get this error, you should check your UDP (5000-65535) Ports are open.
 
 I enabled Object Detection, but doesn't work
-**********************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You should add Adaptive Streaming in Application/Settings.
 
 How to Reduce Latency in RTMP to HLS?
-****************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To reduce the HLS latency there are some parameters and it can be reduced to 8-10 secs for now.
 
@@ -100,12 +99,12 @@ To reduce the HLS latency there are some parameters and it can be reduced to 8-1
 After you have done these adjustments, your delay will be significantly reduced.
 
 How to Enable SSL for Ant Media Server ?
-*******************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 HTTPS and WSS(WebSocket Secure) is mandatory for Google Chrome to run WebRTC and WebSocket applications. In addition, developers want to serve their content with secure connection as well. The script in this document install Let's Encrypt SSL certificate.
 
 Enabling SSL in Linux(Ubuntu)
-******************************
+********************************
 
 Go to the folder where Ant-Media-Server is installed. Default directory is /usr/local/antmedia
 
@@ -151,7 +150,7 @@ If the above scripts returns successfully, SSL will be installed your server, yo
 	ATTENTION: If port 80 is used by some other process or it's forwarded to some other port, enable_ssl.sh will not be successful. Please disable the process or delete the port forwarding temporarily in running the enable_ssl.sh script above
 
 How to Remove Port Forwarding?
-**************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Check that which port forwardings exist in your system with below command.
 
@@ -179,7 +178,7 @@ Delete the rule by line number. For instance to delete the http -> 5080 forwardi
 parameter 2 is the line number, if you want to delete https -> 5443, you should use 1 instead of 2
 
 How to fix issue "Make sure that your domain name was entered correctly and the DNS A AAAA record(s)" ?
-******************************************************************************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - First of all make sure that A record is entered in your DNS settings and point to your server.
 
@@ -188,29 +187,29 @@ How to fix issue "Make sure that your domain name was entered correctly and the 
 - If you forward 80 or 443 ports to 5080 and 5443, then please remove these port forwarding settings as described in below "How to Remove Port Forwarding?".
 
 How to fix “NotSupportedError” in publishing WebRTC stream in Ant Media Server ?
-***************************************************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Problem is caused from attempting to access media source as discussed in https://stackoverflow.com/questions/34215937/getusermedia-not-supported-in-chrome.
 
 To solve this problem you must enable SSL. You can follow instructions in this post https://antmedia.io/enable-ssl-on-ant-media-server.
 
 WebRTC stream stops after a few seconds
-******************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This issue is generally caused by unopened UDP ports. Please make sure that UDP ports 5000 to 65535 of your server are open.
 
 In IOS, Chrome and Firefox cannot open the camera
-***************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This is an IOS bug: https://stackoverflow.com/questions/51501642/chrome-and-firefox-are-not-able-to-access-iphone-camera/53093348#53093348
 
 Which codecs are supported by AntMedia?
-*******************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In video H264 is supported, In audio, for WebRTC, opus is supported and for HLS, AAC is supported.
 
 How to improve WebRTC bit rate?
-**************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Let's remember the definition of WebRTC from its founders:
 
@@ -251,7 +250,7 @@ Our suggestions are as follows:
 	- 1000 Kbps is optimum for 720p, 750 Kbps is also acceptable when FPS is 10.
 
 Pixelating of frames in WebRTC
-**************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This can cause a lot of things. If the broadcast values(Frame drop or etc) and server values (CPU or Ram etc.) are healthy, 3 things that matter to us can be listed below.
 
@@ -282,7 +281,7 @@ It is more stable to broadcast physically near servers.
 If broadcast quality problems occur, lower these values and select the server close to where you broadcast, I hope your quality problem will go away.
 
 Frame Freezing in WebRTC Streaming
-**************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Frame Freezing problem is caused by frame Drop. The frame Drop reasons are listed below.
 
@@ -297,7 +296,7 @@ It is more stable to broadcast physically near servers.
 For Media Streaming, servers with high network capacity are required. If your server's network capacity is low, you may experience frame drops. Also, Frame Drops causes Frame Freezing.
 
 How to Fix 403 Forbidden Error?
-**************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can use IP Filtering for your Ant Media Server's RESTful API gate. 
 If it's ON and your IP is not listed on the enabled IPs List, you cannot access to RESTful API. If you delete 127.0.0.1, localhost web panel will no longer work. 
@@ -305,17 +304,17 @@ Write access IP Address like: 127.0.0.1,192.168.1.1/24,34.22.16.222
 
 
 May I use Docker images to deploy Ant Media Server?
-*********************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Absolutely YES. Utilizing Docker images is a very common way of deploying Ant Media Server.
 
 Have the ultra low latency streams adaptive bit rates as well?
-******************************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Definitely YES. Ant Media Server provides ultra-low latency and adaptive bit rate at the same time.
 
 How many different bit rates possible with Ant Media Server Enterprise Edition?
-**************************************************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There is virtually no limit. AMSEE typically run 4-5 different bitrates with the option to go lower.
 
@@ -330,7 +329,7 @@ There is virtually no limit. AMSEE typically run 4-5 different bitrates with the
 	1080p - 2000 Kbps
 	
 What latencies can I achieve with Ant Media Server Enterprise Edition?
-****************************************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ant Media Server Enterprise Edition is capable of:
 *********************************************************
@@ -342,7 +341,7 @@ Ant Media Server Enterprise Edition is capable of:
 6-10 seconds typical latency with RTMP/WebRTC to HLS streaming path.
 
 What are the deployment options for Ant Media Server?
-************************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There're 4 different methods to use Ant Media Server (AMS):
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -356,7 +355,7 @@ If you have an AWS account, you can use AMS and pay for Amazon: https://aws.amaz
 If you have an Azure account, you can use AMS and pay for Microsoft: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/antmedia.ant_media_server_enterprise
 
 How to set up an auto scaling cluster with Ant Media Server?
-*******************************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Main documentation of Ant Media Server is on http://docs.antmedia.io/en/latest/
 
@@ -369,7 +368,7 @@ AMS Cluster On Azure http://docs.antmedia.io/en/latest/Cloud-Deployments.html#am
 Documentation of AMS has improved and is still developing.
 
 Adaptive Bit Rate Mechanism on Ant Media Server
-*****************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Actually, the bottleneck is the network throughput. So, Ant Media Server is always aware of the network speed, the end-user has on his side. Regardless of the resolution in the Adaptive settings, a bitrate selection is made either upward or downward, depending on the bit rate information and the instantaneous network speed.
 
