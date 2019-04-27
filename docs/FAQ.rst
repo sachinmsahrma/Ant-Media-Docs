@@ -6,48 +6,47 @@ Here we have collected the most frequently asked questions
 
 - `How to reset admin password? <http://docs.antmedia.io/en/latest/FAQ.html#how-to-reset-ant-media-server-admin-password>`_
 
-- `ICE failed, add a STUN server and see about:webrtc for more details <http://docs.antmedia.io/en/latest/FAQ.html#id15>`_
+- `ICE failed, add a STUN server and see about:webrtc for more details <http://docs.antmedia.io/en/latest/FAQ.html#id1>`_
 
 - `I enabled Object Detection, but doesn’t work <http://docs.antmedia.io/en/latest/FAQ.html#i-enabled-object-detection-but-doesn-t-work>`_
 
-- `How to Reduce Latency in RTMP to HLS? <http://docs.antmedia.io/en/latest/FAQ.html#id16>`_
+- `How to Reduce Latency in RTMP to HLS? <http://docs.antmedia.io/en/latest/FAQ.html#id2>`_
 
-- `How to enable SSL for Ant Media Server? <http://docs.antmedia.io/en/latest/FAQ.html#id17>`_
+- `How to enable SSL for Ant Media Server? <http://docs.antmedia.io/en/latest/FAQ.html#id3>`_
 
-- `How to Remove Port Forwarding? <http://docs.antmedia.io/en/latest/FAQ.html#id18>`_
+- `How to Remove Port Forwarding? <http://docs.antmedia.io/en/latest/FAQ.html#id4>`_
 
-- `How to fix issue “Make sure that your domain name was entered correctly and the DNS A AAAA record(s)”? <http://docs.antmedia.io/en/latest/FAQ.html#id19>`_
+- `How to fix issue “Make sure that your domain name was entered correctly and the DNS A AAAA record(s)”? <http://docs.antmedia.io/en/latest/FAQ.html#id5>`_
 
-- `How to fix “NotSupportedError” in publishing WebRTC stream in Ant Media Server ? <http://docs.antmedia.io/en/latest/FAQ.html#id20>`_
+- `How to fix “NotSupportedError” in publishing WebRTC stream in Ant Media Server ? <http://docs.antmedia.io/en/latest/FAQ.html#id6>`_
 
-- `WebRTC stream stops after a few seconds <http://docs.antmedia.io/en/latest/FAQ.html#id21>`_
+- `WebRTC stream stops after a few seconds <http://docs.antmedia.io/en/latest/FAQ.html#id7>`_
 
-- `In IOS, Chrome and Firefox cannot open the camera <http://docs.antmedia.io/en/latest/FAQ.html#id22>`_
+- `In IOS, Chrome and Firefox cannot open the camera <http://docs.antmedia.io/en/latest/FAQ.html#id8>`_
 
-- `Which codecs are supported by AntMedia? <http://docs.antmedia.io/en/latest/FAQ.html#id23>`_
+- `Which codecs are supported by AntMedia? <http://docs.antmedia.io/en/latest/FAQ.html#id9>`_
 
-- `How to improve WebRTC bit rate? <http://docs.antmedia.io/en/latest/FAQ.html#how-to-improve-webrtc-bit-rate>`_
+- `How to improve WebRTC bit rate? <http://docs.antmedia.io/en/latest/FAQ.html#id10>`_
 
-- `Pixelating of frames in WebRTC <http://docs.antmedia.io/en/latest/FAQ.html#id24>`_
+- `Pixelating of frames in WebRTC <http://docs.antmedia.io/en/latest/FAQ.html#id11>`_
 
-- `Frame Freezing in WebRTC Streaming <http://docs.antmedia.io/en/latest/FAQ.html#id25>`_
+- `Frame Freezing in WebRTC Streaming <http://docs.antmedia.io/en/latest/FAQ.html#id12>`_
 
-- `How to Fix 403 Forbidden Error? <http://docs.antmedia.io/en/latest/FAQ.html#how-to-fix-403-forbidden-error>`_
+- `How to Fix 403 Forbidden Error? <http://docs.antmedia.io/en/latest/FAQ.html#id14>`_
 
-- `May I use Docker images to deploy Ant Media Server? <http://docs.antmedia.io/en/latest/FAQ.html#may-i-use-docker-images-to-deploy-ant-media-server>`_
+- `May I use Docker images to deploy Ant Media Server? <http://docs.antmedia.io/en/latest/FAQ.html#id15>`_
 
-- `Have the ultra low latency streams adaptive bit rates as well? <http://docs.antmedia.io/en/latest/FAQ.html#have-the-ultra-low-latency-streams-adaptive-bit-rates-as-well>`_
+- `Have the ultra low latency streams adaptive bit rates as well? <http://docs.antmedia.io/en/latest/FAQ.html#id16>`_
 
-- `How many different bit rates possible with Ant Media Server Enterprise Edition? <http://docs.antmedia.io/en/latest/FAQ.html#how-many-different-bit-rates-possible-with-ant-media-server-enterprise-edition>`_
+- `How many different bit rates possible with Ant Media Server Enterprise Edition? <http://docs.antmedia.io/en/latest/FAQ.html#id17>`_
 
-- `What latencies can I achieve with Ant Media Server Enterprise Edition? <http://docs.antmedia.io/en/latest/FAQ.html#what-latencies-can-i-achieve-with-ant-media-server-enterprise-edition>`_
+- `What latencies can I achieve with Ant Media Server Enterprise Edition? <http://docs.antmedia.io/en/latest/FAQ.html#id18>`_
 
-- `What are the deployment options for Ant Media Server? <http://docs.antmedia.io/en/latest/FAQ.html#what-are-the-deployment-options-for-ant-media-server>`_
+- `What are the deployment options for Ant Media Server? <http://docs.antmedia.io/en/latest/FAQ.html#id19>`_
 
-- `How to set up an auto scaling cluster with Ant Media Server? <http://docs.antmedia.io/en/latest/FAQ.html#how-to-set-up-an-auto-scaling-cluster-with-ant-media-server>`_
+- `How to set up an auto scaling cluster with Ant Media Server? <http://docs.antmedia.io/en/latest/FAQ.html#id20>`_
 
-- `Adaptive Bit Rate Mechanism on Ant Media Server <http://docs.antmedia.io/en/latest/FAQ.html#adaptive-bit-rate-mechanism-on-ant-media-server>`_
-
+- `Adaptive Bit Rate Mechanism on Ant Media Server <http://docs.antmedia.io/en/latest/FAQ.html#id21>`_
 
 How to reset Ant Media Server admin password?
 -----------------------------------------------
