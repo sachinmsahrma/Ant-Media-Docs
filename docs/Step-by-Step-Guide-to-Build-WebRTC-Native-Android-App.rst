@@ -221,42 +221,42 @@ WebRTCClient parameters are in below
 
 	boolean WebRTCClient.toggleMic()
 				
-        toggle microphone
-        @return Microphone Current Status (boolean)
-				
+		toggle microphone
+		@return Microphone Current Status (boolean)
+			
 .. code:: java		
 
 	void WebRTCClient.stopVideoSource()
 				
-        Stops the video source
+		Stops the video source
 				
 .. code:: java				
 
 	void WebRTCClient.startVideoSource()
 				
-        Starts or restarts the video source
+		Starts or restarts the video source
 				
 .. code:: java				
 
 	void WebRTCClient.setSwappedFeeds(boolean b)
 				
-        Swapped the fullscreen renderer and pip renderer
-        @param b
+		Swapped the fullscreen renderer and pip renderer
+		@param b
 				
 .. code:: java				
 
 	void WebRTCClient.setVideoRenderers(SurfaceViewRenderer pipRenderer, SurfaceViewRenderer fullscreenRenderer)
 			
-        Set's the video renderers,
-        @param pipRenderer can be nullable
-        @param fullscreenRenderer cannot be nullable
+		Set's the video renderers,
+		@param pipRenderer can be nullable
+		@param fullscreenRenderer cannot be nullable
 				
 .. code:: java				
 
 	String WebRTCClient.getError()
 				
-        Get the error
-        @return error or null if not
+		Get the error
+		@return error or null if not
 				
 Edit the ``activity_main.xml`` as below
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
