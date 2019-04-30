@@ -174,90 +174,90 @@ WebRTCClient parameters are in below
 
 	void WebRTCClient.init(String url, String streamId, String mode, String token)
 
-    @param url is websocket url to connect
-    @param streamId is the stream id in the server to process
-    @param mode one of the MODE_PUBLISH, MODE_PLAY, MODE_JOIN
-    @param token is one time token string
+		@param url is websocket url to connect
+		@param streamId is the stream id in the server to process
+		@param mode one of the MODE_PUBLISH, MODE_PLAY, MODE_JOIN
+		@param token is one time token string
 
-    If mode is MODE_PUBLISH, stream with streamId field will be published to the Server
-    if mode is MODE_PLAY, stream with streamId field will be played from the Server
+		If mode is MODE_PUBLISH, stream with streamId field will be published to the Server
+		if mode is MODE_PLAY, stream with streamId field will be played from the Server
 	  
 .. code:: java	  
      
 	void WebRTCClient.setOpenFrontCamera(boolean openFrontCamera)
 
-    Camera open order
-    By default front camera is attempted to be opened at first,
-    if it is set to false, another camera that is not front will be tried to be open
-    @param openFrontCamera if it is true, front camera will tried to be opened
-                           if it is false, another camera that is not front will be tried to be opened
-							 
+		Camera open order
+		By default front camera is attempted to be opened at first,
+		if it is set to false, another camera that is not front will be tried to be open
+		@param openFrontCamera if it is true, front camera will tried to be opened
+							   if it is false, another camera that is not front will be tried to be opened
+
 .. code:: java
 
 	void WebRTCClient.startStream()
-  
+			
 		Starts the streaming according to mode
-		
+			
 .. code:: java		
 
 	void WebRTCClient.stopStream()
-
+			
 		Stops the streaming
-
+			
 .. code:: java		
 
 	void WebRTCClient.switchCamera()
-
+			
 		Switches the cameras
-	
+			
 .. code:: java			
 
 	void WebRTCClient.switchVideoScaling(RendererCommon.ScalingType scalingType)
-
+			
 		Switches the video according to type and its aspect ratio
 		@param scalingType
-	
+			
 .. code:: java			
 
 	boolean WebRTCClient.toggleMic()
-
+				
         toggle microphone
         @return Microphone Current Status (boolean)
-		
+				
 .. code:: java		
 
 	void WebRTCClient.stopVideoSource()
-
+				
         Stops the video source
-		
+				
 .. code:: java				
 
 	void WebRTCClient.startVideoSource()
-
+				
         Starts or restarts the video source
-		
+				
 .. code:: java				
 
 	void WebRTCClient.setSwappedFeeds(boolean b)
-
+				
         Swapped the fullscreen renderer and pip renderer
         @param b
-		
+				
 .. code:: java				
 
 	void WebRTCClient.setVideoRenderers(SurfaceViewRenderer pipRenderer, SurfaceViewRenderer fullscreenRenderer)
-
+			
         Set's the video renderers,
         @param pipRenderer can be nullable
         @param fullscreenRenderer cannot be nullable
-		
+				
 .. code:: java				
 
 	String WebRTCClient.getError()
-
+				
         Get the error
         @return error or null if not
-
+				
 Edit the ``activity_main.xml`` as below
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
