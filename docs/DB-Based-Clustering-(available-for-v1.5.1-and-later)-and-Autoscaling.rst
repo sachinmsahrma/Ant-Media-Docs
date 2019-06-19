@@ -7,13 +7,7 @@ To run Ant Media Server in DB Based Clustering please follow these steps.
 * Set ``bind_ip`` value as ``0.0.0.0`` in ``/etc/mongod.conf`` file to let all connections to the MongoDB.
 * Restart Mongodb(sudo service mongod restart) and make sure that you can connect to the MongoDB with something like ``mongo``  
 * Install Ant Media Server one or more server. You can look `here <https://github.com/ant-media/Ant-Media-Server/wiki/Getting-Started>`__.
-* Download the ``change_server_mode.sh`` shell script.
-
-::
-  
-  wget https://raw.githubusercontent.com/ant-media/Scripts/master/change_server_mode.sh
-  chmod 755 change_server_mode.sh
-
+* Navigate to AMS installation directory ``/usr/local/antmedia``.
 * Run the command to restart Ant Media Server in DB based cluster mode.
 ::
 
