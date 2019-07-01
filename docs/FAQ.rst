@@ -48,6 +48,8 @@ Here we have collected the most frequently asked questions
 
 - `Adaptive Bit Rate Mechanism on Ant Media Server <http://docs.antmedia.io/en/latest/FAQ.html#id21>`_
 
+- `How to get still images or previews from a stream? <http://docs.antmedia.io/en/latest/FAQ.html#id22>`_
+
 How to reset Ant Media Server admin password?
 -----------------------------------------------
 
@@ -396,3 +398,12 @@ Adaptive Bit Rate Mechanism on Ant Media Server
 -----------------------------------------------------
 
 Actually, the bottleneck is the network throughput. So, Ant Media Server is always aware of the network speed, the end-user has on his side. Regardless of the resolution in the Adaptive settings, a bitrate selection is made either upward or downward, depending on the bit rate information and the instantaneous network speed.
+
+How to get still images or previews from a stream?
+--------------------------------------------------
+
+This is a Enterprise edition feature, Community edition doesnt support this.
+
+Firstly, ensure that there is a entry in Adaptive Streaming section of management console.
+Then in red5.properties file, update the settings.createPreviewPeriod property to a period you prefer in milliseconds: http://docs.antmedia.io/en/latest/Configurations.html
+Now, preview images will appear in preview folder of the webapps.
