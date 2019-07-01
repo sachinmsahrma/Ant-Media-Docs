@@ -78,6 +78,32 @@ ICE failed, add a STUN server and see about:webrtc for more details
 
 if you get this error, you should check your UDP (5000-65535) Ports are open.
 
+Adding a STUN server:
+
+In WebRTC apps, provide a STUN server:
+
+.. code-block:: javascript
+
+	var pc_config = {
+	'iceServers' : [ {
+	'urls' : 'YOUR_TURN_SERVER'
+	} ]
+	};
+
+Sample:
+
+.. code-block:: javascript
+
+	'iceServers': [
+		{
+		'urls': 'turn:turnserver.example.org', // A TURN server
+		'username': 'webrtc',
+		'credential': 'turnpassword'
+		}
+	]
+
+You can setup a free turn server from here: https://numb.viagenie.ca/
+
 I enabled Object Detection, but doesn't work
 -----------------------------------------------
 
@@ -110,33 +136,33 @@ Go to the folder where Ant-Media-Server is installed. Default directory is /usr/
 .. code-block:: java
 
 	cd /usr/local/antmedia
-	
+
 If there is a service that uses 80 port, you need to disable it. If your system has Apache Web Server, you need to disable it first such a command below
 
 .. code-block:: java
 
-	sudo service apache2 stop	
-	
+	sudo service apache2 stop
+
 There should be a enable_ssl.sh file in the installation directory. Call the enable_ssl.sh with your domain name
 
 .. code-block:: java
 
 	sudo ./enable_ssl.sh example.com
-	
+
 v1.5+, enable_ssl.sh script supports external fullchain.pem and privkey.pem files. It's usage has been changed to
 
 .. code-block:: java
 
 	Usage:
 	sudo ./enable_ssl.sh -d {DOMAIN_NAME}
-	sudo ./enable_ssl.sh -f {FULL_CHAIN_FILE} -p {PRIVATE_KEY_FILE} -d {DOMAIN_NAME} 
-	
+	sudo ./enable_ssl.sh -f {FULL_CHAIN_FILE} -p {PRIVATE_KEY_FILE} -d {DOMAIN_NAME}
+
 If you disable any service that binds to 80 port such as Apache Web Server, enable it again
 
 .. code-block:: java
 
 	sudo service apache2 start
-	
+
 Make sure that your domain points to your server public IP address in the DNS records
 
 If the above scripts returns successfully, SSL will be installed your server, you can use https through 5443. Like below
@@ -156,18 +182,18 @@ Check that which port forwardings exist in your system with below command.
 .. code-block:: java
 
 	sudo iptables -t nat --line-numbers -L
-	
+
 The command above should give an output live below
 
 .. code-block:: java
 
 	Chain PREROUTING (policy ACCEPT)
-	num  target     prot opt source               destination         
+	num  target     prot opt source               destination
 	1    REDIRECT   tcp  --  anywhere             anywhere             tcp dpt:https redir ports 5443
 	2    REDIRECT   tcp  --  anywhere             anywhere             tcp dpt:http redir ports 5080
 
 	...
-	
+
 Delete the rule by line number. For instance to delete the http -> 5080 forwarding, run the command below
 
 .. code-block:: java
@@ -229,10 +255,10 @@ There are some references to this issue:
 
 - A paper from academia: http://wimnet.ee.columbia.edu/wp-content/uploads/2017/10/WebRTC-Performance.pdf
 
-- Test results for the limits from webrtc-experiment.com 
+- Test results for the limits from webrtc-experiment.com
 
 .. code-block:: java
-    
+
 	https://www.webrtc-experiment.com/webrtcpedia/
     Maximum video bitrate on chrome is about 2Mb/s (i.e. 2000kbits/s).
     Minimum video bitrate on chrome is .05Mb/s (i.e. 50kbits/s).
@@ -260,7 +286,7 @@ This can cause a lot of things. If the broadcast values(Frame drop or etc) and s
 
 	Resolution   Video Bitrate (Kbps)  Audio Bitrate (Kbps)
 	1080p              2000                       256
-	720p               1500                       128 
+	720p               1500                       128
 	480p               1000                        75
 	360p                800                        64
 	240p                500                        32
@@ -297,8 +323,8 @@ For Media Streaming, servers with high network capacity are required. If your se
 How to Fix 403 Forbidden Error?
 -----------------------------------------------
 
-You can use IP Filtering for your Ant Media Server's RESTful API gate. 
-If it's ON and your IP is not listed on the enabled IPs List, you cannot access to RESTful API. If you delete 127.0.0.1, localhost web panel will no longer work. 
+You can use IP Filtering for your Ant Media Server's RESTful API gate.
+If it's ON and your IP is not listed on the enabled IPs List, you cannot access to RESTful API. If you delete 127.0.0.1, localhost web panel will no longer work.
 Write access IP Address like: 127.0.0.1,192.168.1.1/24,34.22.16.222
 
 
@@ -326,7 +352,7 @@ There is virtually no limit. AMSEE typically run 4-5 different bitrates with the
 	480p - 1000 Kbps
 	720p - 1500 Kbps
 	1080p - 2000 Kbps
-	
+
 What latencies can I achieve with Ant Media Server Enterprise Edition?
 -----------------------------------------------------------------------------
 
@@ -370,24 +396,3 @@ Adaptive Bit Rate Mechanism on Ant Media Server
 -----------------------------------------------------
 
 Actually, the bottleneck is the network throughput. So, Ant Media Server is always aware of the network speed, the end-user has on his side. Regardless of the resolution in the Adaptive settings, a bitrate selection is made either upward or downward, depending on the bit rate information and the instantaneous network speed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
