@@ -20,10 +20,11 @@ Directory Structure
 
 ::
 
-   /home/antmedia/test
+   /usr/local/test
    |-- webrtctest
    |   |-- run.sh
    |   |-- lib
+   |   |-- test.mp4
    |   '-- webrtctest.jar
    |
    |-- loadtester.jar
