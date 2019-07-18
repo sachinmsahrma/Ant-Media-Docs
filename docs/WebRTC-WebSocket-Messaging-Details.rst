@@ -10,7 +10,7 @@ Publishing WebRTC Stream
 
 ::
 
-   ws://SERVER_NAME:5080/WebRTCAppEE/websocket
+   ws://SERVER_NAME:5080//WebRTCApp/websocket
 
 2. Client sends publish JSON command to the server with stream name
    parameter. (Remove token parameter if token control is not enabled)
